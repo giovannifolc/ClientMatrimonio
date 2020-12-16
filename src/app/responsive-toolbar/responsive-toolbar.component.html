@@ -1,0 +1,28 @@
+<mat-toolbar fxLayout="row" class="toolbar">
+  <mat-toolbar-row fxHide.xs>
+
+    <div class="toolbarButtons">
+      <button mat-button [routerLink]="'/'">Home</button>
+      <button mat-button [routerLink]="'/info'">RSVP & Info</button>
+      <button mat-button [routerLink]="'/listanozze'">Lista nozze </button>
+      <button mat-button [routerLink]="'/grazie'">Un grande grazie</button>
+    </div>
+
+  </mat-toolbar-row>
+  <button mat-icon-button (click)="side.toggle()" fxHide fxShow.xs >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-drawer-container autosize fxHide fxShow.xs>
+    <mat-drawer mode="side" opened position="start" #side>
+      <div>
+        <button mat-button [routerLink]="'/'">Home</button>
+        <mat-divider></mat-divider>
+        <button mat-button [routerLink]="'/info'">RSVP & Info</button>
+        <mat-divider></mat-divider>
+        <button mat-button [routerLink]="'/listanozze'">Lista nozze </button>
+        <mat-divider></mat-divider>
+        <button mat-button [routerLink]="'/grazie'">Un grande grazie</button>
+      </div>
+    </mat-drawer>
+  </mat-drawer-container>
+</mat-toolbar>
