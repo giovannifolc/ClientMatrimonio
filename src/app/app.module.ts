@@ -16,6 +16,7 @@ import { InfoComponent } from './info/info.component';
 import { ListaNozzeComponent } from './lista-nozze/lista-nozze.component';
 import { GrazieComponent } from './grazie/grazie.component';
 import {AppRoutingModule} from './app-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import {AppRoutingModule} from './app-routing.module';
     MatDividerModule,
     MatSidenavModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
