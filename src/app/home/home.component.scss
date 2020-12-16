@@ -1,4 +1,4 @@
-.container1Home{
+.container1Home {
   display: flex;
   width: 100%;
   height: auto;
@@ -11,13 +11,16 @@
   background-color: #255d40;
 
   .contBianco {
+    display: block;
+    padding: 20px;
     background-color: #fff;
-    color:#fff;
     width: 40%;
     height: 500px;
     position: relative;
     left: 50%;
     bottom: 40px;
     transform: translateX(-50%);
+    text-align: center;
+    overflow: hidden;
   }
 }

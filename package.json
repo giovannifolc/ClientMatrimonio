@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "all": "npm i; npm audit --force; npm run hmr",
     "hmr": "ng serve --hmr",
     "build": "ng build",
     "test": "ng test",
