@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { timer } from 'rxjs'
+import {DomSanitizer} from '@angular/platform-browser';
+import {MatIconRegistry} from '@angular/material/icon';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -21,7 +23,17 @@ export class HomeComponent implements OnInit {
     this.timer = days + ' Giorni ' + hours + ' Ore ' + minutes + ' Minuti ' + seconds + ' Secondi';
   });
 
-  constructor() { }
+  constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
+    this.iconRegistry.addSvgIcon(
+      'church',
+      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/church.svg'));
+    this.iconRegistry.addSvgIcon(
+      'party',
+      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/party.svg'));
+    this.iconRegistry.addSvgIcon(
+      'calendar',
+      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/calendar.svg'));
+  }
 
   ngOnInit(): void {
 
