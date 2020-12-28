@@ -12,7 +12,7 @@ export class ResponsiveToolbarComponent implements OnInit {
   navLinks = [
     {path: '/', label: 'Home'},
     {path: '/info', label: 'RSVP & Info'},
-    {path: '/listanozze', label: 'Lista ssnozze'},
+    {path: '/listanozze', label: 'Lista nozze'},
     {path: '/grazie'}
 
   ];

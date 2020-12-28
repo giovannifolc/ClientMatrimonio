@@ -1,1 +1,58 @@
 <app-responsive-toolbar></app-responsive-toolbar>
+
+<!--Qui c'è il testo da mettere nel box centrale-->
+<div>
+  <span>
+    Se nasce lo stupore dell’incontro fatto, in esso è implicito il senso di una Grazia, di un dono […]. Anche in tal caso, però, non è possibile scoprire tutto il valore di quel presentimento o di quello stupore se non si incontra una compagnia nei quali sia già viva la coscienza che tutto ci è donato da Dio. Nell’aderire con gioia alla nostra vocazione, abbiamo a mente il volto amico di ciascuno di voi e ne siamo immensamente grati. Ci auguriamo di vedervi tutti per festeggiare insieme!
+  </span>
+  <span>Simo & Leti</span>
+</div>
+<!-- QUI INIZIANO GLI SLIDESHOW-->
+<div class="mall-slide">
+  <div class="slid-content">
+    <div class="mall-show-slide fade" *ngFor="let item of ImageData1;">
+      <img src="{{item}}" style="width:100%">
+    </div>
+    <!--<div class="mall-carousel-ind">
+      <ul>
+        <li *ngFor="let item of Imagedata; let i = index;" [class.mall-this]="startIndex - 1 === i"></li>
+      </ul>
+    </div>-->
+  </div>
+</div>
+<div class="mall-slide">
+  <div class="slid-content">
+    <div class="mall-show-slide fade" *ngFor="let item of ImageData2;">
+      <img src="{{item}}" style="width:100%">
+    </div>
+    <!--<div class="mall-carousel-ind">
+      <ul>
+        <li *ngFor="let item of Imagedata; let i = index;" [class.mall-this]="startIndex - 1 === i"></li>
+      </ul>
+    </div>-->
+  </div>
+</div>
+<div class="mall-slide">
+  <div class="slid-content">
+    <div class="mall-show-slide fade" *ngFor="let item of ImageData3;">
+      <img src="{{item}}" style="width:100%">
+    </div>
+    <!--<div class="mall-carousel-ind">
+      <ul>
+        <li *ngFor="let item of Imagedata; let i = index;" [class.mall-this]="startIndex - 1 === i"></li>
+      </ul>
+    </div>-->
+  </div>
+</div>
+<div class="mall-slide">
+  <div class="slid-content">
+    <div class="mall-show-slide fade" *ngFor="let item of ImageData4;">
+      <img src="{{item}}" style="width:100%">
+    </div>
+    <!--<div class="mall-carousel-ind">
+      <ul>
+        <li *ngFor="let item of Imagedata; let i = index;" [class.mall-this]="startIndex - 1 === i"></li>
+      </ul>
+    </div>-->
+  </div>
+</div>
