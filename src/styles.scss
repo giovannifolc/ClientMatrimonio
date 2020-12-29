@@ -1,10 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 .fs30 {
   font-size: 30px;
@@ -24,4 +30,25 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .mb10 {
   margin-bottom: 40px;
+}
+
+.button {
+  color: white;
+  border: none;
+  background-color: black;
+  padding: 8px 0;
+  text-align: center;
+  min-width: 200px;
+  font-size: 20px;
+  font-weight: 800;
+
+  &:hover {
+    text-decoration: none;
+    background-color: #989191;
+    color: white;
+  }
+}
+
+::ng-deep .mat-raised-button {
+  box-shadow: none;
 }

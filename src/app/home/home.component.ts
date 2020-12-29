@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core'
 import { timer } from 'rxjs'
-import {DomSanitizer} from '@angular/platform-browser';
-import {MatIconRegistry} from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconRegistry } from '@angular/material/icon';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
-  timer = ' ';
+export class HomeComponent {
+  // #region Properties (3)
 
-  clock = timer(0, 1000);
-  subscribe = this.clock.subscribe(val => {
+  public clock = timer(0, 1000);
+  public subscribe = this.clock.subscribe(val => {
     let now = new Date();
     let date = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDay(), now.getHours(), now.getUTCMinutes(), now.getUTCMinutes(), now.getUTCSeconds());
     let futuredate = Date.UTC(2021, 4, 10, 10, 30, 0);
@@ -22,8 +22,16 @@ export class HomeComponent implements OnInit {
     let seconds = Math.floor(missingTime - (days * 24 * 3600) - (hours * 3600) - minutes * 60);
     this.timer = days + ' Giorni ' + hours + ' Ore ' + minutes + ' Minuti ' + seconds + ' Secondi';
   });
+  public timer = ' ';
 
-  constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
+  // #endregion Properties (3)
+
+  // #region Constructors (1)
+
+  constructor(
+    private iconRegistry: MatIconRegistry,
+    private sanitizer: DomSanitizer
+  ) {
     this.iconRegistry.addSvgIcon(
       'church',
       this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/church.svg'));
@@ -35,8 +43,5 @@ export class HomeComponent implements OnInit {
       this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/calendar.svg'));
   }
 
-  ngOnInit(): void {
-
-  }
-
+  // #endregion Constructors (1)
 }
