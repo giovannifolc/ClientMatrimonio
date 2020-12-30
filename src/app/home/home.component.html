@@ -1,35 +1,66 @@
 <app-responsive-toolbar></app-responsive-toolbar>
 <div class="container1Home">
-  <img alt="immagine in montagna" src="../../assets/images/background_home_try.jpg" class="backgroundHome" />
+  <img alt="immagine in montagna" src="../../assets/images/homeImg.jpg" class="backgroundHome" />
 </div>
 <div class="rettVerde">
   <div class="contBianco">
+
     <p class="fs30 mb10"> 10 Aprile 2021</p>
     <p class="fs50 green mb10">Simone e Letizia</p>
-    <p class="fs30">
-      L'inizio di ogni nostra mossa non è un'analisi di ciò che gli occhi
-      vedono, ma un abbraccio di ciò che il cuore attende. (Luigi Giussani)
-    </p>
+
+    <div class="separatore">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <div class="quoted">
+      <img src="assets/images/double-quote.svg" class="quote1">
+      <img src="assets/images/double-quote.svg" class="quote2">
+      <p class="text fs30">
+        L'inizio di ogni nostra mossa non è un'analisi di ciò che gli occhi
+        vedono, ma un abbraccio di ciò che il cuore attende.<br>(Luigi Giussani)
+      </p>
+    </div>
   </div>
 </div>
-<div class="container2Home"></div>
 <!-- links-->
-<div>
-  <span>SAVE THE DATE</span>
-  <mat-icon svgIcon="calendar"></mat-icon>
-  <a mat-raised-button [routerLink]="'/info'" >RSVP</a>
+<div class="container2Home">
+  <div class="card">
+    <span class="cardTitle">SAVE THE DATE</span>
+    <mat-icon svgIcon="calendar"></mat-icon>
+    <span class="t1">data</span>
+    <span class="t2">Inizio celebrazione 11:00</span>
+    <a [routerLink]="'/info'" class="button">RSVP</a>
+  </div>
+
+  <div class="card">
+    <span class="cardTitle">CERIMONIA</span>
+    <mat-icon class="icon-display" svgIcon="church" label="10 Aprile 2021"></mat-icon>
+    <span class="t1">nome chiesa</span>
+    <span class="t2">via della chiesa, 42 Torino</span>
+    <a href="https://goo.gl/maps/viiADx5rWwoHY1qY6" class="button">Maps</a>
+  </div>
+
+  <div class="card">
+    <span class="cardTitle">FESTEGGIAMENTI</span>
+    <mat-icon svgIcon="party"></mat-icon>
+    <span class="t1">Nome del locale</span>
+    <span class="t2">via dei festeggiamenti, 176/A</span>
+
+    <a href="https://goo.gl/maps/yfgZiwV4a8xNbUpW6" class="button">Maps</a>
+
+  </div>
 </div>
-<div>
-  <span>CERIMONIA</span>
-  <mat-icon svgIcon="church" label="10 Aprile 2021"></mat-icon>
-  <a mat-raised-button href="https://goo.gl/maps/viiADx5rWwoHY1qY6">Maps</a>
-  <span></span>
-</div>
-<div>
-  <span>FESTEGGIAMENTI</span>
-  <mat-icon svgIcon="party"></mat-icon>
-  <a mat-raised-button href="https://goo.gl/maps/yfgZiwV4a8xNbUpW6">Maps</a>
-</div>
+
+<div class="footer"></div>
+
+<!--COUNTDOWN-->
 <div class="timer">
   <span>{{ timer }}</span>
 </div>
