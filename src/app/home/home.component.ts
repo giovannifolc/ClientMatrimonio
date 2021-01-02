@@ -15,6 +15,7 @@ export class HomeComponent {
   public hours = 0;
   public minutes = 0;
   public seconds = 0;
+  public timerExpired = false;
   public subscribe = this.clock.subscribe(val => {
     const now = new Date().getTime();
     const futuredate = Date.parse('April 10 2021 10:30:00 GMT+0100');
@@ -24,8 +25,11 @@ export class HomeComponent {
     this.minutes = Math.floor((missingTime / 1000 / 60) % 60);
     this.hours = Math.floor((missingTime / (1000 * 60 * 60)) % 24);
     this.days = Math.floor(missingTime / (1000 * 60 * 60 * 24));
-    this.timer = this.days + ' Giorni ' + this.hours + ' Ore ' + this.minutes + ' Minuti ' + this.seconds + ' Secondi';
+    // this.timer = this.days + ' Giorni ' + this.hours + ' Ore ' + this.minutes + ' Minuti ' + this.seconds + ' Secondi';
 
+    if (missingTime < 0) {
+      this.timerExpired = true;
+    }
   });
   public timer = '';
 

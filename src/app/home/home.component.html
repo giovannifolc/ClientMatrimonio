@@ -78,7 +78,7 @@
   <div class="countdown">
     <!-- <span>{{ timer }}</span> -->
     <!--TODO: mostrare messaggio se data passata-->
-    <ng-container *ngIf="seconds>0">
+    <ng-container *ngIf="!timerExpired">
       <!--GIORNI-->
       <div class="countBlock">
         <div class="number">
