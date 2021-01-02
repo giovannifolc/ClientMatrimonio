@@ -24,8 +24,7 @@
     font-family: avenir-regular;
     .cardTitle {
       font-size: 20px;
-
-      font-weight: 600;
+      font-family: avenir-bold;
       color: #767171;
       text-align: center;
     }
@@ -73,6 +72,74 @@
   height: 200px;
   width: 100%;
   background-color: #255d40;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 500px;
+  width: 100%;
+  background-color: #255d40;
+  font-family: avenir-bold;
+
+  .title {
+    text-align: center;
+    margin: 0 0 16px 0;
+
+    > span {
+      color: white;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    .subTitle {
+      color: white;
+      font-size: 20px;
+      line-height: 20px;
+      font-family: avenir-regular;
+    }
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 200px;
+    margin: 50px 0;
+
+    .countBlock {
+      display: block;
+      width: 180px;
+      height: auto;
+      .number {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 0 20px 0;
+        text-align: center;
+
+        > span {
+          font-size: 100px;
+          line-height: 100px;
+          color: white;
+        }
+      }
+      .label {
+        display: block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+
+        > span {
+          font-size: 30px;
+          line-height: 30px;
+          color: white;
+        }
+      }
+    }
+  }
 }
 
 .quoted {

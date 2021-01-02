@@ -58,9 +58,83 @@
   </div>
 </div>
 
-<div class="footer"></div>
+<!-- <div class="footer"></div> -->
 
 <!--COUNTDOWN-->
 <div class="timer">
-  <span>{{ timer }}</span>
+  <div>
+    <p class="title">
+      <span>
+        SAVE THE DATE
+      </span>
+    </p>
+    <p class="title">
+      <span class="subTitle">
+        Sabato 10 Aprile 2021
+      </span>
+    </p>
+  </div>
+
+  <div class="countdown">
+    <!-- <span>{{ timer }}</span> -->
+    <ng-container *ngIf="true">
+      <!--GIORNI-->
+      <div class="countBlock">
+        <div class="number">
+          <span>
+            {{days}}
+          </span>
+        </div>
+        <div class="label">
+          <span>
+            GIORNI
+          </span>
+        </div>
+      </div>
+
+      <!--ORE-->
+      <div class="countBlock">
+        <div class="number">
+          <span>
+            {{hours}}
+          </span>
+        </div>
+        <div class="label">
+          <span>
+            ORE
+          </span>
+        </div>
+      </div>
+
+      <!--MINUTI-->
+      <div class="countBlock">
+        <div class="number">
+          <span>
+            {{minutes}}
+          </span>
+        </div>
+        <div class="label">
+          <span>
+            MINUTI
+          </span>
+        </div>
+      </div>
+
+      <!--SECONDI-->
+      <div class="countBlock">
+        <div class="number">
+          <span>
+            {{seconds}}
+          </span>
+        </div>
+        <div class="label">
+          <span>
+            SECONDI
+          </span>
+        </div>
+      </div>
+    </ng-container>
+
+  </div>
+
 </div>
