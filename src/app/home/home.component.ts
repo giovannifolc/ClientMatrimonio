@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core'
-import { timer } from 'rxjs'
+import { Component, OnInit } from '@angular/core';
+import { timer } from 'rxjs';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
 @Component({
@@ -8,23 +8,28 @@ import { MatIconRegistry } from '@angular/material/icon';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  // #region Properties (3)
+  // #region Properties (7)
 
   public clock = timer(0, 1000);
+  public days = 0;
+  public hours = 0;
+  public minutes = 0;
+  public seconds = 0;
   public subscribe = this.clock.subscribe(val => {
-    let now = new Date();
-    let date = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDay(), now.getHours(), now.getUTCMinutes(), now.getUTCMinutes(), now.getUTCSeconds());
-    let futuredate = Date.UTC(2021, 4, 10, 10, 30, 0);
-    let missingTime = futuredate - date;
-    let days = Math.floor(missingTime / (24 * 3600));
-    let hours = Math.floor((missingTime - (days * 24 * 3600)) / 3600);
-    let minutes = Math.floor((missingTime - (days * 24 * 3600) - hours * 3600) / 60);
-    let seconds = Math.floor(missingTime - (days * 24 * 3600) - (hours * 3600) - minutes * 60);
-    this.timer = days + ' Giorni ' + hours + ' Ore ' + minutes + ' Minuti ' + seconds + ' Secondi';
-  });
-  public timer = ' ';
+    const now = new Date().getTime();
+    const futuredate = Date.parse('April 10 2021 10:30:00 GMT+0100');
+    const missingTime = futuredate - now;
 
-  // #endregion Properties (3)
+    this.seconds = Math.floor((missingTime / 1000) % 60);
+    this.minutes = Math.floor((missingTime / 1000 / 60) % 60);
+    this.hours = Math.floor((missingTime / (1000 * 60 * 60)) % 24);
+    this.days = Math.floor(missingTime / (1000 * 60 * 60 * 24));
+    this.timer = this.days + ' Giorni ' + this.hours + ' Ore ' + this.minutes + ' Minuti ' + this.seconds + ' Secondi';
+
+  });
+  public timer = '';
+
+  // #endregion Properties (7)
 
   // #region Constructors (1)
 

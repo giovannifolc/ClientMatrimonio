@@ -1,16 +1,37 @@
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: abuget;
+  src: url(assets/fonts/Abuget.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: avenir-bold;
+  src: url(assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: avenir-regular;
+  src: url(assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: avenir-italic;
+  src: url(assets/fonts/AvenirNextLTPro-It.otf) format("opentype");
+}
+
 /* You can add global styles to this file, and also import other style files */
 
 html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-
-/* Importing Bootstrap SCSS file. */
-@import "~bootstrap/scss/bootstrap";
 
 .fs30 {
   font-family: avenir-regular;
@@ -53,20 +74,4 @@ body {
 
 ::ng-deep .mat-raised-button {
   box-shadow: none;
-}
-@font-face {
-  font-family: abuget;
-  src: url(assets/fonts/Abuget.ttf) format("opentype");
-}
-@font-face {
-  font-family: avenir-bold;
-  src: url(assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype");
-}
-@font-face {
-  font-family: avenir-regular;
-  src: url(assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype");
-}
-@font-face {
-  font-family: avenir-italic;
-  src: url(assets/fonts/AvenirNextLTPro-It.otf) format("opentype");
 }
