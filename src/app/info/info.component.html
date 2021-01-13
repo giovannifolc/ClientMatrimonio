@@ -1,15 +1,75 @@
 <app-responsive-toolbar></app-responsive-toolbar>
-<!--<google-map
-  height="500px"
-  width="100%"
-  [zoom]="zoom"
-  [center]="center"
-  [options]="options"
-><map-marker
-  [position]="churchMarker.position"
-  [label]="churchMarker.label"
-  [title]="churchMarker.title"
-  [options]="churchMarker.options"
-></map-marker></google-map>
-<button (click)="zoomIn()">Zoom in</button>
-<button (click)="zoomOut()">Zoom out</button>-->
+<div class="TitoloPrimaParte">
+  <span>Per la chiesa</span>
+</div>
+<div>
+  <span>Santa Maria Goretti è la parrocchia di Letizia, abbiamo deciso di sposarci qui perché ...</span>
+  <a href="https://goo.gl/maps/viiADx5rWwoHY1qY6" class="button">Maps</a>
+</div>
+<img src="../../assets/images/santa_maria_goretti.jpg" />
+<div class="container1Info">
+  <img src="../../assets/images/mappa_chiesa.png" class="mappa_chiesa" (click)="navigateTo('chiesa')" /> <!-- pointer diventi manina-->
+</div>
+<div>
+  <span>Festeggiamo!</span>
+</div>
+<div>
+  <img src="../../assets/images/cascina_marietta.jpg" />
+</div>
+<div>
+  <span>
+    Il ricevimento sarà nell Cascina Marietta, un’incantevole tenuta settecentesca ai piedi della collina di Cherasco, immersa nella quiete della campagna piemontese e circondata dalle alture delle Langhe. Con un grande parco ricco di piante secolari, un ampio ed elegante cortile e degli affascinanti porticati.
+  </span>
+  <span>
+    Via Bergoglio, 56, Cherasco, CN
+  </span>
+  <a href="https://goo.gl/maps/yfgZiwV4a8xNbUpW6" class="button">Maps</a>
+</div>
+<div class="container2Info">
+  <img src="../../assets/images/mappa_ristorante.png" class="mappa_ristorante" (click)="navigateTo('ristorante')"/> <!-- pointer diventi manina-->
+</div>
+
+<div class="RSVP">
+  <form [formGroup]="rsvpForm">
+    <mat-form-field style="width: 100%">
+      <label>Nome*</label>
+      <input matInput formControlName="nome"
+             placeholder="">
+      <mat-error *ngIf="rsvpForm.controls.nome">{{getErrorNome()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field style="width: 100%">
+      <label>Cognome*</label>
+      <input matInput formControlName="cognome"
+             placeholder="">
+      <mat-error *ngIf="rsvpForm.controls.cognome">{{getErrorCognome()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field style="width: 100%">
+      <label>Email*</label>
+      <input type="email" matInput formControlName="email"
+             placeholder="">
+      <mat-error *ngIf="rsvpForm.controls.email">{{getErrorEmail()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field style="width: 100%">
+      <label>Adulti*</label>
+      <input type="number" matInput formControlName="adulti"
+             placeholder="">
+      <mat-error *ngIf="rsvpForm.controls.adulti">{{getErrorAdulti()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field style="width: 100%">
+      <label>Bambini</label>
+      <input type="number" matInput formControlName="bambini"
+             placeholder="">
+      <mat-error *ngIf="rsvpForm.controls.adulti">{{getErrorBambini()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field style="width: 100%">
+      <label>Intolleranze</label>
+      <textarea matInput formControlName="intolleranze"></textarea>
+    </mat-form-field>
+
+  </form>
+  <button mat-raised-button
+          [disabled]="rsvpForm.controls.nome.value === '' || rsvpForm.controls.cognome.value === '' ||
+          rsvpForm.controls.email.hasError('required') ||  rsvpForm.controls.adulti.hasError('min')
+          || rsvpForm.controls.adulti.hasError('required') || rsvpForm.controls.bambini.hasError('min')" (click)="submitRSVP()" type="submit">Invia</button>
+
+</div>

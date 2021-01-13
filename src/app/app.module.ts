@@ -18,7 +18,9 @@ import { GrazieComponent } from './grazie/grazie.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule} from '@angular/common/http';
-import {GoogleMapsModule} from '@angular/google-maps';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import {GoogleMapsModule} from '@angular/google-maps';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    GoogleMapsModule
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

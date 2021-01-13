@@ -1,68 +1,155 @@
 import { Component, OnInit } from '@angular/core';
-
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {HttpParams} from '@angular/common/http';
+import {CommunicationService} from '../services/communication.service';
+declare var ol: any;
 @Component({
   selector: 'app-info',
   templateUrl: './info.component.html',
   styleUrls: ['./info.component.scss']
 })
+
 export class InfoComponent implements OnInit {
+  latitude: number = 45.07922;
+  longitude: number =  7.62078;
+  map: any;
+  constructor(private commService: CommunicationService) {
+  }
+  ngOnInit() {
+    /*this.map = new ol.Map({
+      target: 'map',
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
+        })
+      ],
+      view: new ol.View({
+        center: ol.proj.fromLonLat([this.longitude, this.latitude]),
+        zoom:17
+      })
+    });
 
-
-  constructor() {
+    this.addPoint(this.latitude, this.longitude);*/
   }
 
-  center: google.maps.LatLngLiteral
+  /*setCenter() {
+    var view = this.map.getView();
+    view.setCenter(ol.proj.fromLonLat([this.longitude, this.latitude]));
+    view.addMarker(ol.proj.fromLonLat([this.longitude, this.latitude]));
+    view.setZoom(12);
+  }
 
-  ngOnInit() {
-
-
-
-    navigator.geolocation.getCurrentPosition((position) => {
-      this.center = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude,
-      }
-    })
-    this.churchMarker = {
-      position: {
-        lat: this.center.lat + ((Math.random() - 0.5) * 2) / 10,
-        lng: this.center.lng + ((Math.random() - 0.5) * 2) / 10,
-      },
-      label: {
-        color: 'red',
-        text: 'Marker label ' + (1),
-      },
-      title: 'Marker title ' + (1),
-      info: 'Marker info ' + (1),
-      options: {
-        animation: google.maps.Animation.BOUNCE,
-      },
+  addPoint(lat: number, lng: number) {
+    var vectorLayer = new ol.layer.Vector({
+      source: new ol.source.Vector({
+        features: [new ol.Feature({
+          geometry: new ol.geom.Point(ol.proj.transform([lng, lat], 'EPSG:4326', 'EPSG:3857')),
+        })]
+      }),
+      style: new ol.style.Style({
+        image: new ol.style.Icon({
+          anchor: [0.5, 0.5],
+          anchorXUnits: "fraction",
+          anchorYUnits: "fraction",
+          src: "assets/img/location-pointer.png"
+        })
+      })
+    });
+    this.map.addLayer(vectorLayer);
+  }
+*/
+  rsvpForm = new FormGroup({
+    nome: new FormControl('', Validators.required),
+    cognome: new FormControl('', Validators.required),
+    email: new FormControl('',[
+      Validators.required,
+      Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
+    adulti: new FormControl('', [Validators.required, Validators.min(1)]),
+    bambini: new FormControl('', Validators.min(0)),
+    intolleranze: new FormControl('')
+  });
+  navigateTo(luogo: string) {
+    if(luogo == 'chiesa'){
+      window.open('https://goo.gl/maps/viiADx5rWwoHY1qY6', '_blank');
+    }else if(luogo == 'ristorante'){
+      window.open('https://goo.gl/maps/yfgZiwV4a8xNbUpW6', '_blank');
     }
   }
 
-  zoom = 12
-
-
-  churchMarker;
-
-  options: google.maps.MapOptions = {
-    mapTypeId: 'hybrid',
-    zoomControl: false,
-    scrollwheel: false,
-    disableDoubleClickZoom: true,
-    maxZoom: 15,
-    minZoom: 8,
+  getErrorNome() {
+    if (this.rsvpForm.controls.nome.hasError('required')) {
+      return 'Campo necessario';
+    }
   }
 
-
-  zoomIn() {
-    if (this.zoom < this.options.maxZoom) this.zoom++
+  getErrorCognome() {
+    if (this.rsvpForm.controls.cognome.hasError('required')) {
+      return 'Campo necessario';
+    }
   }
 
-  zoomOut() {
-    if (this.zoom > this.options.minZoom) this.zoom--
+  getErrorEmail() {
+    if (this.rsvpForm.controls.email.hasError('required')) {
+      return 'Campo necessario';
+    }else{
+      return 'Inserire una mail corretta';
+    }
   }
 
+  getErrorAdulti() {
+    if (this.rsvpForm.controls.adulti.hasError('required')) {
+      return 'Campo necessario';
+    }else{
+      return 'Inserire un valore positivo';
+    }
+  }
+    getErrorBambini() {
+      if (this.rsvpForm.controls.bambini.hasError('min')) {
+        return 'Vuoi regalarcene qualcuno?';
+      }
+  }
+
+  submitRSVP() {
+  // se sono presenti errori nel formGroup non faccio l'operazione ma visualizzo nella dialog tramite flag gli errori
+    if (this.rsvpForm.controls.nome.value === '' || this.rsvpForm.controls.cognome.value === '' ||
+      this.rsvpForm.controls.email.hasError('required') ||  this.rsvpForm.controls.adulti.hasError('min')
+      || this.rsvpForm.controls.adulti.hasError('required') || this.rsvpForm.controls.bambini.hasError('min') ) {
+      //non va bene
+    } else {
+      //altrimenti inizializzo i parametri necessari
+      let data: RSVP;
+      if(this.rsvpForm.controls.bambini.value != 0 && this.rsvpForm.controls.intolleranze.value != ""){
+        data = new RSVP(this.rsvpForm.controls.nome.value, this.rsvpForm.controls.cognome.value, this.rsvpForm.controls.nome.value, this.rsvpForm.controls.adulti.value, this.rsvpForm.controls.bambini.value, this.rsvpForm.controls.intolleranze.value);
+      }else if(this.rsvpForm.controls.bambini.value != 0){
+        data = new RSVP(this.rsvpForm.controls.nome.value, this.rsvpForm.controls.cognome.value, this.rsvpForm.controls.nome.value, this.rsvpForm.controls.adulti.value, 0, this.rsvpForm.controls.intolleranze.value);
+      }else if(this.rsvpForm.controls.intolleranze.value != ""){
+        data = new RSVP(this.rsvpForm.controls.nome.value, this.rsvpForm.controls.cognome.value, this.rsvpForm.controls.nome.value, this.rsvpForm.controls.adulti.value, 0, "");
+      }
+      //this.commService.send
+      //manda il tutto al generatore di email
+
+    }
+
+
+  }
+}
+
+export class RSVP{
+  nome: string;
+  cognome: string;
+  email: string;
+  adulti: number;
+  bambini: number;
+  intolleranze: string;
+
+  constructor(nome:string, cognome:string, email:string, adulti:number, bambini: number = 0, intolleranze: string = "") {
+    this.nome = nome;
+    this.cognome = cognome;
+    this.email = email;
+    this.adulti = adulti;
+    this.bambini = bambini;
+    this.intolleranze = intolleranze;
+  }
 
 
 }
