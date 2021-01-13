@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {RSVP} from '../info/info.component';
+import { Observable, throwError } from 'rxjs';
+import {catchError} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +13,14 @@ export class CommunicationService {
 
   }
   httpOptions = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
-  API_PATH = 'http://localhost:4200/';
+  private API_PATH = 'http://localhost:4200/api';
 
+  sendRSVP(data: RSVP) {
+    let p;
+    return this.http.post( `${this.API_PATH}/RSVP`, data, this.httpOptions).pipe(
+      catchError(err => {
+        console.error(err);
+        return throwError(err);
+      })).subscribe(x => p=x);
+  }
 }

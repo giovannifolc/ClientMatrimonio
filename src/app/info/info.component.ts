@@ -118,14 +118,22 @@ export class InfoComponent implements OnInit {
     } else {
       //altrimenti inizializzo i parametri necessari
       let data: RSVP;
-      if(this.rsvpForm.controls.bambini.value != 0 && this.rsvpForm.controls.intolleranze.value != ""){
-        data = new RSVP(this.rsvpForm.controls.nome.value, this.rsvpForm.controls.cognome.value, this.rsvpForm.controls.nome.value, this.rsvpForm.controls.adulti.value, this.rsvpForm.controls.bambini.value, this.rsvpForm.controls.intolleranze.value);
-      }else if(this.rsvpForm.controls.bambini.value != 0){
-        data = new RSVP(this.rsvpForm.controls.nome.value, this.rsvpForm.controls.cognome.value, this.rsvpForm.controls.nome.value, this.rsvpForm.controls.adulti.value, 0, this.rsvpForm.controls.intolleranze.value);
-      }else if(this.rsvpForm.controls.intolleranze.value != ""){
-        data = new RSVP(this.rsvpForm.controls.nome.value, this.rsvpForm.controls.cognome.value, this.rsvpForm.controls.nome.value, this.rsvpForm.controls.adulti.value, 0, "");
+      let bambini = this.rsvpForm.controls.bambini.value;
+      let intolleranze = this.rsvpForm.controls.intolleranze.value;
+      let nome = this.rsvpForm.controls.nome.value;
+      let cognome = this.rsvpForm.controls.cognome.value;
+      let email = this.rsvpForm.controls.email.value;
+      let adulti = this.rsvpForm.controls.adulti.value;
+      if((bambini != "" || bambini != 0) && intolleranze != ""){
+        data = new RSVP(nome, cognome, email, adulti, bambini, intolleranze);
+      }else if(bambini != 0 || bambini != ""){
+        data = new RSVP(nome, cognome, email, adulti, bambini, "");
+      }else if(intolleranze != ""){
+        data = new RSVP(nome, cognome, email, adulti, 0, intolleranze);
+      }else{
+        data = new RSVP(nome, cognome, email, adulti, 0, "")
       }
-      //this.commService.send
+      this.commService.sendRSVP(data)
       //manda il tutto al generatore di email
 
     }

@@ -70,6 +70,7 @@
   <button mat-raised-button
           [disabled]="rsvpForm.controls.nome.value === '' || rsvpForm.controls.cognome.value === '' ||
           rsvpForm.controls.email.hasError('required') ||  rsvpForm.controls.adulti.hasError('min')
-          || rsvpForm.controls.adulti.hasError('required') || rsvpForm.controls.bambini.hasError('min')" (click)="submitRSVP()" type="submit">Invia</button>
+          || rsvpForm.controls.adulti.hasError('required') || rsvpForm.controls.bambini.hasError('min')"
+          (click)="submitRSVP()" type="submit">Invia</button>
 
 </div>

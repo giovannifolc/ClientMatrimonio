@@ -1,0 +1,14 @@
+{
+  "/api": {
+    "target": "http://localhost:8080",
+    "pathRewrite": { "/api" : "/API" },
+    "changeOrigin": true,
+    "secure": false
+  },
+  "/notify":{
+    "target": "http://localhost:8080",
+    "pathRewrite": { "/notify" : "" },
+    "changeOrigin": true,
+    "secure": false
+  }
+}
