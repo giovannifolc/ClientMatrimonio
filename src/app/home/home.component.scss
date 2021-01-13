@@ -63,6 +63,23 @@
   }
 }
 
+.container3Home {
+  height: 700px;
+  width: 100%;
+  background-color: #255d40;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container4Home {
+  height: 500px;
+  width: 100%;
+  background-color: white;
+}
+
 .mat-icon {
   width: 70px;
   height: 70px;
@@ -179,5 +196,33 @@
     border-radius: 50%;
     display: inline-block;
     margin-right: 8px;
+  }
+}
+
+.textualButton {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c7dabc;
+  padding: 10px 30px;
+  cursor: pointer;
+
+  .title {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    font-family: avenir-regular;
+  }
+
+  .subTitle {
+    font-size: 18px;
+    line-height: 24px;
+    // font-weight: bold;
+    font-family: avenir-regular;
+  }
+
+  &:hover {
+    background-color: red;
   }
 }
