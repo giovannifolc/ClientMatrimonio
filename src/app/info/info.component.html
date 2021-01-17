@@ -1,24 +1,70 @@
 <app-responsive-toolbar></app-responsive-toolbar>
-<div class="TitoloPrimaParte">
-  <span>Per la chiesa</span>
+<div class="titolo">
+  <div class="separatore green2">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  <span class="text">Per la chiesa</span>
+  <div class="separatore green2">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
 </div>
+
 <div>
   <span>Santa Maria Goretti è la parrocchia di Letizia, abbiamo deciso di sposarci qui perché ...</span>
   <a href="https://goo.gl/maps/viiADx5rWwoHY1qY6" class="button">Maps</a>
 </div>
 <img src="../../assets/images/santa_maria_goretti.jpg" />
 <div class="container1Info">
-  <img src="../../assets/images/mappa_chiesa.png" class="mappa_chiesa" (click)="navigateTo('chiesa')" /> <!-- pointer diventi manina-->
+  <img src="../../assets/images/mappa_chiesa.png" class="mappa_chiesa" (click)="navigateTo('chiesa')" />
+  <!-- pointer diventi manina-->
 </div>
-<div>
-  <span>Festeggiamo!</span>
+
+<div class="titolo">
+  <div class="separatore green2">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  <span class="text">Festeggiamo!</span>
+  <div class="separatore green2">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
 </div>
+
 <div>
   <img src="../../assets/images/cascina_marietta.jpg" />
 </div>
 <div>
   <span>
-    Il ricevimento sarà nell Cascina Marietta, un’incantevole tenuta settecentesca ai piedi della collina di Cherasco, immersa nella quiete della campagna piemontese e circondata dalle alture delle Langhe. Con un grande parco ricco di piante secolari, un ampio ed elegante cortile e degli affascinanti porticati.
+    Il ricevimento sarà nell Cascina Marietta, un’incantevole tenuta settecentesca ai piedi della collina di Cherasco,
+    immersa nella quiete della campagna piemontese e circondata dalle alture delle Langhe. Con un grande parco ricco di
+    piante secolari, un ampio ed elegante cortile e degli affascinanti porticati.
   </span>
   <span>
     Via Bergoglio, 56, Cherasco, CN
@@ -26,51 +72,93 @@
   <a href="https://goo.gl/maps/yfgZiwV4a8xNbUpW6" class="button">Maps</a>
 </div>
 <div class="container2Info">
-  <img src="../../assets/images/mappa_ristorante.png" class="mappa_ristorante" (click)="navigateTo('ristorante')"/> <!-- pointer diventi manina-->
+  <img src="../../assets/images/mappa_ristorante.png" class="mappa_ristorante" (click)="navigateTo('ristorante')" />
+  <!-- pointer diventi manina-->
 </div>
 
-<div class="RSVP">
-  <form [formGroup]="rsvpForm">
-    <mat-form-field style="width: 100%">
-      <label>Nome*</label>
-      <input matInput formControlName="nome"
-             placeholder="">
-      <mat-error *ngIf="rsvpForm.controls.nome">{{getErrorNome()}}</mat-error>
-    </mat-form-field>
-    <mat-form-field style="width: 100%">
-      <label>Cognome*</label>
-      <input matInput formControlName="cognome"
-             placeholder="">
-      <mat-error *ngIf="rsvpForm.controls.cognome">{{getErrorCognome()}}</mat-error>
-    </mat-form-field>
-    <mat-form-field style="width: 100%">
-      <label>Email*</label>
-      <input type="email" matInput formControlName="email"
-             placeholder="">
-      <mat-error *ngIf="rsvpForm.controls.email">{{getErrorEmail()}}</mat-error>
-    </mat-form-field>
-    <mat-form-field style="width: 100%">
-      <label>Adulti*</label>
-      <input type="number" matInput formControlName="adulti"
-             placeholder="">
-      <mat-error *ngIf="rsvpForm.controls.adulti">{{getErrorAdulti()}}</mat-error>
-    </mat-form-field>
-    <mat-form-field style="width: 100%">
-      <label>Bambini</label>
-      <input type="number" matInput formControlName="bambini"
-             placeholder="">
-      <mat-error *ngIf="rsvpForm.controls.adulti">{{getErrorBambini()}}</mat-error>
-    </mat-form-field>
-    <mat-form-field style="width: 100%">
-      <label>Intolleranze</label>
-      <textarea matInput formControlName="intolleranze"></textarea>
-    </mat-form-field>
+<div class="titolo">
+  <div class="separatore green2">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  <span class="text">RSVP</span>
+  <div class="separatore green2">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+<div class="flex">
+  <div class="formRSVP">
+    <form [formGroup]="rsvpForm">
+      <div class="control">
+        <mat-form-field style="width: 100%">
+          <label>Nome*</label>
+          <input matInput formControlName="nome" placeholder="">
+          <mat-error *ngIf="rsvpForm.controls.nome">{{getErrorNome()}}</mat-error>
+        </mat-form-field>
+      </div>
 
-  </form>
-  <button mat-raised-button
-          [disabled]="rsvpForm.controls.nome.value === '' || rsvpForm.controls.cognome.value === '' ||
+      <div class="control">
+        <mat-form-field style="width: 100%">
+          <label>Cognome*</label>
+          <input matInput formControlName="cognome" placeholder="">
+          <mat-error *ngIf="rsvpForm.controls.cognome">{{getErrorCognome()}}</mat-error>
+        </mat-form-field>
+      </div>
+
+
+      <div class="control">
+        <mat-form-field style="width: 100%">
+          <label>Email*</label>
+          <input type="email" matInput formControlName="email" placeholder="">
+          <mat-error *ngIf="rsvpForm.controls.email">{{getErrorEmail()}}</mat-error>
+        </mat-form-field>
+      </div>
+
+
+      <div class="control">
+        <mat-form-field style="width: 100%">
+          <label>Adulti*</label>
+          <input type="number" matInput formControlName="adulti" placeholder="">
+          <mat-error *ngIf="rsvpForm.controls.adulti">{{getErrorAdulti()}}</mat-error>
+        </mat-form-field>
+      </div>
+
+
+      <div class="control">
+        <mat-form-field style="width: 100%">
+          <label>Bambini</label>
+          <input type="number" matInput formControlName="bambini" placeholder="">
+          <mat-error *ngIf="rsvpForm.controls.adulti">{{getErrorBambini()}}</mat-error>
+        </mat-form-field>
+      </div>
+
+
+      <div class="control">
+        <mat-form-field style="width: 100%">
+          <label>Intolleranze</label>
+          <textarea matInput formControlName="intolleranze"></textarea>
+        </mat-form-field>
+
+      </div>
+
+    </form>
+    <button mat-raised-button [disabled]="rsvpForm.controls.nome.value === '' || rsvpForm.controls.cognome.value === '' ||
           rsvpForm.controls.email.hasError('required') ||  rsvpForm.controls.adulti.hasError('min')
           || rsvpForm.controls.adulti.hasError('required') || rsvpForm.controls.bambini.hasError('min')"
-          (click)="submitRSVP()" type="submit">Invia</button>
+      (click)="submitRSVP()" type="submit">Invia</button>
 
+  </div>
 </div>
