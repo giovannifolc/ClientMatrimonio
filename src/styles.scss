@@ -1,5 +1,6 @@
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
+@import "src/assets/styles/colors.scss";
 
 @font-face {
   font-family: abuget;
@@ -75,4 +76,35 @@ body {
 
 ::ng-deep .mat-raised-button {
   box-shadow: none;
+}
+
+.separatore {
+  .dot {
+    height: 8px;
+    width: 8px;
+    background-color: #367e3d;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+  }
+  &.green1 {
+    .dot {
+      background-color: $green1;
+    }
+  }
+  &.green2 {
+    .dot {
+      background-color: $green2;
+    }
+  }
+  &.green3 {
+    .dot {
+      background-color: $green3;
+    }
+  }
+  &.green4 {
+    .dot {
+      background-color: $green4;
+    }
+  }
 }
