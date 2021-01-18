@@ -100,7 +100,9 @@
   width: 100%;
   display: flex;
   height: 600px;
-  background-color: red;
+  &.green {
+    background-color: $green1;
+  }
 
   .left {
     width: 50%;
@@ -113,7 +115,7 @@
   }
   .right {
     width: 50%;
-    background-color: blue;
+    // background-color: blue;
     height: 100%;
     display: flex;
     align-items: center;
@@ -126,8 +128,15 @@
     justify-content: space-between;
   }
   .immagine {
-    height: 90%;
-    width: auto;
+    object-fit: cover;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+
+    &.h {
+      height: 100%;
+      width: unset;
+    }
   }
   .descrizione {
     font-family: avenir-regular;
@@ -136,6 +145,47 @@
     line-height: 150%;
     &.bold {
       font-family: avenir-bold;
+    }
+  }
+}
+
+.mappa {
+  display: block;
+  img {
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+    // border: $green1 3px solid;
+    display: block;
+  }
+  .gmapLink {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 30px;
+    border: $green1 solid 3px;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    background-color: $green3;
+
+    &:hover {
+      background-color: $green4;
+    }
+
+    .linkMaps {
+      padding: auto;
+      width: 100%;
+      text-align: center;
+      vertical-align: center;
+      background-color: transparent;
+      text-decoration: none;
+      color: $green1;
+      &:hover {
+        background-color: transparent;
+        text-decoration: none;
+        color: $green1;
+      }
     }
   }
 }

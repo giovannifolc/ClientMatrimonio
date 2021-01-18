@@ -27,11 +27,12 @@
   <div class="left sb">
     <span class="descrizione">Santa Maria Goretti è la parrocchia di Letizia, abbiamo deciso di sposarci qui
       perché...</span><br>
-    <a href="https://goo.gl/maps/viiADx5rWwoHY1qY6" class="button">Maps</a>
-    <div class="container1Info">
-      <img src="../../assets/images/mappa_chiesa.png" class="mappa_chiesa" height="300px" width="auto"
-        (click)="navigateTo('chiesa')" />
-      <!-- pointer diventi manina-->
+    <div class="mappa">
+      <img src="../../assets/images/mappa_chiesa.png" class="mappa_ristorante" height="300px" width="auto"
+        (click)="navigateTo('ristorante')" />
+      <div class="gmapLink flex">
+        <a href="https://goo.gl/maps/viiADx5rWwoHY1qY6" class="linkMaps">Maps</a>
+      </div>
     </div>
   </div>
   <div class="right">
@@ -67,31 +68,33 @@
 
 <div class="containerRSVP">
   <div class="left">
-
+    <img src="../../assets/images/cascina_marietta.jpg" class="immagine" />
   </div>
   <div class="right sb">
     <span class="descrizione">
-      Il ricevimento sarà nella Cascina Marietta, un'incantevole tenuta settecentesca ai piedi della collina di
+      Il ricevimento sarà nella Cascina Marinetta, un'incantevole tenuta settecentesca ai piedi della collina di
       Cherasco, immersa nella quiete della campagna piemontese e circondata dalle alture delle Langhe. Con un grande
       parco ricco di piante secolari, un ampio ed elegante cortile e degli affascinanti porticati.
     </span><br>
     <span class="descrizione bold">
       Via Bergoglio, 56, Cherasco, CN
     </span>
-    <img src="../../assets/images/mappa_ristorante.png" class="mappa_ristorante" height="300px" width="auto"
-      (click)="navigateTo('ristorante')" />
-    <a href="https://goo.gl/maps/yfgZiwV4a8xNbUpW6" class="button">Maps</a>
+    <div class="mappa">
+      <img src="../../assets/images/mappa_ristorante.png" class="mappa_ristorante" height="300px" width="auto"
+        (click)="navigateTo('ristorante')" />
+      <div class="gmapLink flex">
+        <a href="https://goo.gl/maps/yfgZiwV4a8xNbUpW6" class="linkMaps">Maps</a>
+      </div>
+    </div>
+
+
   </div>
 </div>
 
-<div>
+<!-- <div>
   <img src="../../assets/images/cascina_marietta.jpg" />
-</div>
+</div> -->
 
-<div class="container2Info">
-
-  <!-- pointer diventi manina-->
-</div>
 
 <div class="titolo">
   <div class="separatore green2">
