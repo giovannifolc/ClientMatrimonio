@@ -23,15 +23,23 @@
   </div>
 </div>
 
-<div>
-  <span>Santa Maria Goretti è la parrocchia di Letizia, abbiamo deciso di sposarci qui perché ...</span>
-  <a href="https://goo.gl/maps/viiADx5rWwoHY1qY6" class="button">Maps</a>
+<div class="containerRSVP">
+  <div class="left sb">
+    <span class="descrizione">Santa Maria Goretti è la parrocchia di Letizia, abbiamo deciso di sposarci qui
+      perché...</span><br>
+    <a href="https://goo.gl/maps/viiADx5rWwoHY1qY6" class="button">Maps</a>
+    <div class="container1Info">
+      <img src="../../assets/images/mappa_chiesa.png" class="mappa_chiesa" height="300px" width="auto"
+        (click)="navigateTo('chiesa')" />
+      <!-- pointer diventi manina-->
+    </div>
+  </div>
+  <div class="right">
+    <img src="../../assets/images/santa_maria_goretti.jpg" class="immagine" />
+  </div>
 </div>
-<img src="../../assets/images/santa_maria_goretti.jpg" />
-<div class="container1Info">
-  <img src="../../assets/images/mappa_chiesa.png" class="mappa_chiesa" (click)="navigateTo('chiesa')" />
-  <!-- pointer diventi manina-->
-</div>
+
+
 
 <div class="titolo">
   <div class="separatore green2">
@@ -57,22 +65,31 @@
   </div>
 </div>
 
+<div class="containerRSVP">
+  <div class="left">
+
+  </div>
+  <div class="right sb">
+    <span class="descrizione">
+      Il ricevimento sarà nella Cascina Marietta, un'incantevole tenuta settecentesca ai piedi della collina di
+      Cherasco, immersa nella quiete della campagna piemontese e circondata dalle alture delle Langhe. Con un grande
+      parco ricco di piante secolari, un ampio ed elegante cortile e degli affascinanti porticati.
+    </span><br>
+    <span class="descrizione bold">
+      Via Bergoglio, 56, Cherasco, CN
+    </span>
+    <img src="../../assets/images/mappa_ristorante.png" class="mappa_ristorante" height="300px" width="auto"
+      (click)="navigateTo('ristorante')" />
+    <a href="https://goo.gl/maps/yfgZiwV4a8xNbUpW6" class="button">Maps</a>
+  </div>
+</div>
+
 <div>
   <img src="../../assets/images/cascina_marietta.jpg" />
 </div>
-<div>
-  <span>
-    Il ricevimento sarà nell Cascina Marietta, un’incantevole tenuta settecentesca ai piedi della collina di Cherasco,
-    immersa nella quiete della campagna piemontese e circondata dalle alture delle Langhe. Con un grande parco ricco di
-    piante secolari, un ampio ed elegante cortile e degli affascinanti porticati.
-  </span>
-  <span>
-    Via Bergoglio, 56, Cherasco, CN
-  </span>
-  <a href="https://goo.gl/maps/yfgZiwV4a8xNbUpW6" class="button">Maps</a>
-</div>
+
 <div class="container2Info">
-  <img src="../../assets/images/mappa_ristorante.png" class="mappa_ristorante" (click)="navigateTo('ristorante')" />
+
   <!-- pointer diventi manina-->
 </div>
 
@@ -118,7 +135,6 @@
         </mat-form-field>
       </div>
 
-
       <div class="control">
         <mat-form-field style="width: 100%">
           <label>Email*</label>
@@ -126,7 +142,6 @@
           <mat-error *ngIf="rsvpForm.controls.email">{{getErrorEmail()}}</mat-error>
         </mat-form-field>
       </div>
-
 
       <div class="control">
         <mat-form-field style="width: 100%">
@@ -136,7 +151,6 @@
         </mat-form-field>
       </div>
 
-
       <div class="control">
         <mat-form-field style="width: 100%">
           <label>Bambini</label>
@@ -145,7 +159,6 @@
         </mat-form-field>
       </div>
 
-
       <div class="control">
         <mat-form-field style="width: 100%">
           <label>Intolleranze</label>
@@ -153,8 +166,9 @@
         </mat-form-field>
 
       </div>
-
+      <label>*campo obbligatorio</label>
     </form>
+
     <button mat-raised-button [disabled]="rsvpForm.controls.nome.value === '' || rsvpForm.controls.cognome.value === '' ||
           rsvpForm.controls.email.hasError('required') ||  rsvpForm.controls.adulti.hasError('min')
           || rsvpForm.controls.adulti.hasError('required') || rsvpForm.controls.bambini.hasError('min')"

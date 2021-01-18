@@ -47,13 +47,20 @@
     font-family: avenir-regular;
     font-weight: 800;
   }
+
+  button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
-// ::ng-deep .mat-form-field {
-//   .mat-form-field-flex {
-//     // background-color: $green3;
-//   }
-// }
+::ng-deep .mat-form-field {
+  .mat-form-field-infix {
+    // background-color: $green3;
+    border: 0;
+  }
+}
 
 ::ng-deep .mat-form-field.mat-focused {
   .mat-form-field-label {
@@ -87,4 +94,48 @@
 
 ::ng-deep .mat-error {
   color: $error;
+}
+
+.containerRSVP {
+  width: 100%;
+  display: flex;
+  height: 600px;
+  background-color: red;
+
+  .left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .right {
+    width: 50%;
+    background-color: blue;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .sb {
+    justify-content: space-between;
+  }
+  .immagine {
+    height: 90%;
+    width: auto;
+  }
+  .descrizione {
+    font-family: avenir-regular;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    &.bold {
+      font-family: avenir-bold;
+    }
+  }
 }
