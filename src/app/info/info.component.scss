@@ -135,6 +135,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 20px;
+    overflow: hidden;
   }
   .right {
     width: 50%;
@@ -145,6 +146,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 20px;
+    overflow: hidden;
   }
 
   .sb {
@@ -189,7 +191,7 @@
     width: 80px;
     height: auto;
     border-top: none;
-    margin-top: 30px;
+    margin-top: 20px;
 
     .linkMaps {
       padding: auto;
