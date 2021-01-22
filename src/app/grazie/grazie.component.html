@@ -2,7 +2,7 @@
 <div class="page">
   <div class="left">
     <div class="photoContainer">
-      <ngb-carousel #carousel *ngIf="ImageData4" [showNavigationArrows]="showNavigationArrows"
+      <ngb-carousel #carouselTL *ngIf="ImageData4" [showNavigationArrows]="showNavigationArrows"
         [showNavigationIndicators]="showNavigationIndicators">
         <ng-template ngbSlide *ngFor="let image of ImageData4">
           <div class="picsum-img-wrapper">
@@ -13,7 +13,7 @@
     </div>
 
     <div class="photoContainer">
-      <ngb-carousel #carousel *ngIf="ImageData2" [showNavigationArrows]="showNavigationArrows"
+      <ngb-carousel #carouselBL *ngIf="ImageData2" [showNavigationArrows]="showNavigationArrows"
         [showNavigationIndicators]="showNavigationIndicators">
         <ng-template ngbSlide *ngFor="let image of ImageData2">
           <div class="picsum-img-wrapper">
@@ -26,7 +26,7 @@
 
   <div class="right">
     <div class="photoContainer">
-      <ngb-carousel #carousel *ngIf="ImageData3" [showNavigationArrows]="showNavigationArrows"
+      <ngb-carousel #carouselTR *ngIf="ImageData3" [showNavigationArrows]="showNavigationArrows"
         [showNavigationIndicators]="showNavigationIndicators">
         <ng-template ngbSlide *ngFor="let image of ImageData3">
           <div class="picsum-img-wrapper">
@@ -37,7 +37,7 @@
     </div>
 
     <div class="photoContainer">
-      <ngb-carousel #carousel *ngIf="ImageData1" [showNavigationArrows]="showNavigationArrows"
+      <ngb-carousel #carouselBR *ngIf="ImageData1" [showNavigationArrows]="showNavigationArrows"
         [showNavigationIndicators]="showNavigationIndicators">
         <ng-template ngbSlide *ngFor="let image of ImageData1">
           <div class="picsum-img-wrapper">
@@ -72,36 +72,3 @@
   </div>
 
 </div>
-
-
-
-
-<!-- QUI INIZIANO GLI SLIDESHOW-->
-<!-- <div class="mall-slide">
-  <div class="slid-content">
-    <div class="mall-show-slide fade" *ngFor="let item of ImageData1;">
-      <img src="{{item}}" style="width:100%">
-    </div>
-  </div>
-</div> -->
-<!-- <div class="mall-slide">
-  <div class="slid-content">
-    <div class="mall-show-slide fade" *ngFor="let item of ImageData2;">
-      <img src="{{item}}" style="width:100%">
-    </div>
-  </div>
-</div> -->
-<!-- <div class="mall-slide">
-  <div class="slid-content">
-    <div class="mall-show-slide fade" *ngFor="let item of ImageData3;">
-      <img src="{{item}}" style="width:100%">
-    </div>
-  </div>
-</div> -->
-<!-- <div class="mall-slide">
-      <div class="slid-content">
-        <div class="mall-show-slide fade" *ngFor="let item of ImageData4;">
-          <img src="{{item}}">
-        </div>
-      </div>
-    </div> -->
