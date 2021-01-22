@@ -72,6 +72,9 @@ body {
     background-color: #989191;
     color: white;
   }
+  &.disabled {
+    background-color: #989191;
+  }
 }
 
 ::ng-deep .mat-raised-button {
@@ -107,10 +110,18 @@ body {
       background-color: $green4;
     }
   }
+  &.white {
+    .dot {
+      background-color: white;
+    }
+  }
 }
 
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
+  &.green1 {
+    background-color: $green1;
+  }
 }
