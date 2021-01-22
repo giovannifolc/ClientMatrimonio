@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {RSVP} from '../info/info.component';
+import {RSVP} from '../models/rsvp.model';
 import { Observable, throwError } from 'rxjs';
 import {catchError} from 'rxjs/operators';
 

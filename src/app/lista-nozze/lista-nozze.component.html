@@ -1,1 +1,21 @@
 <app-responsive-toolbar></app-responsive-toolbar>
+<div>
+  <button [routerLink]="'/listanozze/lista'">Lista</button>
+</div>
+<div>
+  <button [routerLink]="'/listanozze/viaggio'">Viaggio</button>
+</div>
+
+<div class="container" style="alignment: left" [routerLink]="'/listanozze/lista'">
+  <img src="/assets/images/lista_nozze_verticale.png" alt="Norway">
+  <div class="text-block">
+    <h4>Lista Nozze</h4>
+  </div>
+</div>
+
+<div class="container" style="alignment: right" [routerLink]="'/listanozze/viaggio'">
+  <img src="/assets/images/maldive_verticale.png" alt="Norway">
+  <div class="text-block">
+    <h4>Viaggio di Nozze</h4>
+  </div>
+</div>

@@ -21,6 +21,8 @@ import { HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { ProdottiComponent } from './lista-nozze/prodotti/prodotti.component';
+import { ViaggioComponent } from './lista-nozze/viaggio/viaggio.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import {MatInputModule} from '@angular/material/input';
     HomeComponent,
     InfoComponent,
     ListaNozzeComponent,
-    GrazieComponent
+    GrazieComponent,
+    ProdottiComponent,
+    ViaggioComponent
   ],
   imports: [
     BrowserModule,
