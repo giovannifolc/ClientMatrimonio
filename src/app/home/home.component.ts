@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { timer } from 'rxjs';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,7 +10,18 @@ import { MatIconRegistry } from '@angular/material/icon';
 })
 export class HomeComponent {
   // #region Properties (7)
-
+  public Images = [
+    "assets/images/grazie/od_laurea_j.jpg",
+    "assets/images/grazie/os_simo_and_co_a_serre.jpg",
+    "assets/images/grazie/od_leti_e_compagni_liceo.jpg",
+    "assets/images/grazie/os_simo_e_famiglia.jpg",
+    "assets/images/grazie/od_leti_e_mitica_segre.jpg",
+    "assets/images/grazie/os_poli.jpg",
+    "assets/images/grazie/od_leti_e_svizzere.jpg",
+    "assets/images/grazie/os_simo_and_co_al_lago.jpg",
+    "assets/images/grazie/od_leti_simo_e_franco.jpg",
+    "assets/images/grazie/os_simo_leti_e_j.jpg"
+  ]
   public clock = timer(0, 1000);
   public days = 0;
   public hours = 0;
@@ -39,7 +51,8 @@ export class HomeComponent {
 
   constructor(
     private iconRegistry: MatIconRegistry,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    config: NgbCarouselConfig
   ) {
     this.iconRegistry.addSvgIcon(
       'church',
@@ -50,6 +63,10 @@ export class HomeComponent {
     this.iconRegistry.addSvgIcon(
       'calendar',
       this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/calendar.svg'));
+    config.interval = 4000;
+    config.wrap = true;
+    config.keyboard = false;
+    config.pauseOnHover = false;
   }
 
   // #endregion Constructors (1)

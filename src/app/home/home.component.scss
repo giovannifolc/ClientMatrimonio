@@ -84,6 +84,7 @@
 
 .container4Home {
   height: 500px;
+  max-height: 500px;
   width: 100%;
   background-color: white;
   display: flex;
@@ -91,6 +92,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .boxScritta {
+    position: absolute;
+    width: auto;
+    .center {
+      margin: 20px;
+      text-align: center;
+      width: 800px;
+    }
+  }
+
+  .photoContainerHome {
+    width: 570px;
+    height: 90%;
+    overflow: hidden;
+    opacity: 0.3;
+  }
 }
 
 .mat-icon {

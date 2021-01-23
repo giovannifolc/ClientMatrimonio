@@ -82,6 +82,7 @@ body {
 }
 
 .button {
+  display: inline-block;
   color: white;
   border: none;
   background-color: black;
@@ -149,4 +150,34 @@ body {
   &.green1 {
     background-color: $green1;
   }
+  &.column {
+    flex-direction: column;
+  }
+}
+
+// for carousels
+.picsum-img-wrapper {
+  overflow: hidden;
+  .myImg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.carousel-item {
+  /* Force to always be block */
+  display: block !important;
+  z-index: 1;
+  position: absolute;
+  transform: translateX(0);
+  opacity: 0;
+  transition: all 1s;
+  visibility: hidden;
+}
+
+.carousel-item.active {
+  position: relative;
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
 }
