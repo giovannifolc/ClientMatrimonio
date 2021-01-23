@@ -112,7 +112,7 @@
 </div> -->
 
 
-<div class="titolo green">
+<div class="titolo green" id="rsvp" >
   <div class="separatore white">
     <span class="dot"></span>
     <span class="dot"></span>
@@ -141,7 +141,7 @@
       <div class="control">
         <mat-form-field style="width: 100%">
           <label>Nome*</label>
-          <input matInput formControlName="nome" placeholder="">
+          <input matInput formControlName="nome" placeholder="" >
           <mat-error *ngIf="rsvpForm.controls.nome">{{getErrorNome()}}</mat-error>
         </mat-form-field>
       </div>
