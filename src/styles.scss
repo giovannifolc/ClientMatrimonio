@@ -3,6 +3,21 @@
 @import "src/assets/styles/colors.scss";
 
 @font-face {
+  font-family: almond-cream;
+  src: url(assets/fonts/AlmondCream.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: honey;
+  src: url(assets/fonts/Honey.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: keep-on-truckin;
+  src: url(assets/fonts/KeeponTruckin.ttf) format("opentype");
+}
+
+@font-face {
   font-family: abuget;
   src: url(assets/fonts/Abuget.ttf) format("opentype");
 }
@@ -48,7 +63,12 @@ body {
   font-weight: 500;
   line-height: 60px;
 }
-
+.fs25 {
+  font-family: abuget;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 60px;
+}
 .green {
   color: #367e3d;
 }
