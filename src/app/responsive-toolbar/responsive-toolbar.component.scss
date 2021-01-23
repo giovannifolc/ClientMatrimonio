@@ -1,5 +1,7 @@
+@import "src/assets/styles/colors.scss";
+
 .toolbar{
-  background-color: #c7dabc;
+  background-color: $greenbar;
 }
 
 .toolbarButtons{
@@ -10,4 +12,5 @@
 button {
   font-family: honey;
   font-size: 30px;
+  color: white;
 }

@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {HttpParams} from '@angular/common/http';
 import {CommunicationService} from '../services/communication.service';
 import {RSVP} from '../models/rsvp.model';
+import {ActivatedRoute} from '@angular/router';
 declare var ol: any;
 @Component({
   selector: 'app-info',
@@ -14,51 +15,14 @@ export class InfoComponent implements OnInit {
   latitude: number = 45.07922;
   longitude: number =  7.62078;
   map: any;
-  constructor(private commService: CommunicationService) {
+  constructor(private commService: CommunicationService, private route: ActivatedRoute) {
   }
   ngOnInit() {
-    /*this.map = new ol.Map({
-      target: 'map',
-      layers: [
-        new ol.layer.Tile({
-          source: new ol.source.OSM()
-        })
-      ],
-      view: new ol.View({
-        center: ol.proj.fromLonLat([this.longitude, this.latitude]),
-        zoom:17
-      })
-    });
-
-    this.addPoint(this.latitude, this.longitude);*/
+    this.route.fragment.subscribe(f => {
+      const element = document.querySelector("#" + f)
+      if (element)
+        element.scrollIntoView()})
   }
-
-  /*setCenter() {
-    var view = this.map.getView();
-    view.setCenter(ol.proj.fromLonLat([this.longitude, this.latitude]));
-    view.addMarker(ol.proj.fromLonLat([this.longitude, this.latitude]));
-    view.setZoom(12);
-  }
-
-  addPoint(lat: number, lng: number) {
-    var vectorLayer = new ol.layer.Vector({
-      source: new ol.source.Vector({
-        features: [new ol.Feature({
-          geometry: new ol.geom.Point(ol.proj.transform([lng, lat], 'EPSG:4326', 'EPSG:3857')),
-        })]
-      }),
-      style: new ol.style.Style({
-        image: new ol.style.Icon({
-          anchor: [0.5, 0.5],
-          anchorXUnits: "fraction",
-          anchorYUnits: "fraction",
-          src: "assets/img/location-pointer.png"
-        })
-      })
-    });
-    this.map.addLayer(vectorLayer);
-  }
-*/
   rsvpForm = new FormGroup({
     nome: new FormControl('', Validators.required),
     cognome: new FormControl('', Validators.required),

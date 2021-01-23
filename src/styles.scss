@@ -85,7 +85,7 @@ body {
   display: inline-block;
   color: white;
   border: none;
-  background-color: black;
+  background-color: $greenbar;
   padding: 8px 0;
   text-align: center;
   min-width: 200px;
@@ -95,7 +95,7 @@ body {
 
   &:hover {
     text-decoration: none;
-    background-color: #989191;
+    background-color: $green3;//#989191;
     color: white;
   }
   &.disabled {
