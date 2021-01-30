@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { NgbCarousel, NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-grazie',
@@ -53,7 +54,7 @@ export class GrazieComponent implements OnInit, AfterViewInit {
 
   // #region Constructors (1)
 
-  constructor(config: NgbCarouselConfig) {
+  constructor(config: NgbCarouselConfig, private route: ActivatedRoute) {
     config.interval = 7000;
     config.wrap = true;
     config.keyboard = false;
@@ -65,6 +66,10 @@ export class GrazieComponent implements OnInit, AfterViewInit {
   // #region Public Methods (2)
 
   public ngAfterViewInit() {
+    this.route.fragment.subscribe(f => {
+      const element = document.querySelector("#" + f)
+      if (element)
+        element.scrollIntoView()})
     this.carouselTR.pause();
     this.carouselTL.pause();
     this.carouselBR.pause();

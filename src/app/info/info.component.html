@@ -138,60 +138,60 @@
 <div class="flex green1">
   <div class="formRSVP">
     <form [formGroup]="rsvpForm">
-      <div class="control">
-        <mat-form-field style="width: 100%">
-          <label>Nome*</label>
-          <input matInput formControlName="nome" placeholder="" >
+      <div class="control" >
+        <mat-form-field style="width: 100%;">
+          <label class="inputLabel">Nome*</label>
+          <input matInput formControlName="nome" placeholder="" class="inputStyle">
           <mat-error *ngIf="rsvpForm.controls.nome">{{getErrorNome()}}</mat-error>
         </mat-form-field>
       </div>
 
       <div class="control">
         <mat-form-field style="width: 100%">
-          <label>Cognome*</label>
-          <input matInput formControlName="cognome" placeholder="">
+          <label class="inputLabel">Cognome*</label>
+          <input matInput formControlName="cognome" placeholder="" class="inputStyle">
           <mat-error *ngIf="rsvpForm.controls.cognome">{{getErrorCognome()}}</mat-error>
         </mat-form-field>
       </div>
 
       <div class="control">
         <mat-form-field style="width: 100%">
-          <label>Email*</label>
-          <input type="email" matInput formControlName="email" placeholder="">
+          <label class="inputLabel">Email*</label>
+          <input type="email" matInput formControlName="email" placeholder="" class="inputStyle">
           <mat-error *ngIf="rsvpForm.controls.email">{{getErrorEmail()}}</mat-error>
         </mat-form-field>
       </div>
 
       <div class="control">
         <mat-form-field style="width: 100%">
-          <label>Adulti*</label>
-          <input type="number" matInput formControlName="adulti" placeholder="">
+          <label class="inputLabel">Adulti*</label>
+          <input type="number" matInput formControlName="adulti" placeholder="" class="inputStyle">
           <mat-error *ngIf="rsvpForm.controls.adulti">{{getErrorAdulti()}}</mat-error>
         </mat-form-field>
       </div>
 
       <div class="control">
         <mat-form-field style="width: 100%">
-          <label>Bambini</label>
-          <input type="number" matInput formControlName="bambini" placeholder="">
+          <label class="inputLabel">Bambini</label>
+          <input type="number" matInput formControlName="bambini" placeholder="" class="inputStyle">
           <mat-error *ngIf="rsvpForm.controls.adulti">{{getErrorBambini()}}</mat-error>
         </mat-form-field>
       </div>
 
       <div class="control">
         <mat-form-field style="width: 100%">
-          <label>Intolleranze</label>
-          <textarea matInput formControlName="intolleranze"></textarea>
+          <label class="inputLabel">Intolleranze</label>
+          <textarea matInput formControlName="intolleranze" class="inputAreaStyle"></textarea>
         </mat-form-field>
 
       </div>
       <label>*campo obbligatorio</label>
     </form>
 
-    <button mat-raised-button [disabled]="rsvpForm.controls.nome.value === '' || rsvpForm.controls.cognome.value === '' ||
+    <button mat-raised-button disabled
+      (click)="submitRSVP()" type="submit">Impossibile confermare al momento</button> <!--[disabled]="rsvpForm.controls.nome.value === '' || rsvpForm.controls.cognome.value === '' ||
           rsvpForm.controls.email.hasError('required') ||  rsvpForm.controls.adulti.hasError('min')
-          || rsvpForm.controls.adulti.hasError('required') || rsvpForm.controls.bambini.hasError('min')"
-      (click)="submitRSVP()" type="submit">Invia</button>
+          || rsvpForm.controls.adulti.hasError('required') || rsvpForm.controls.bambini.hasError('min')" -->
 
   </div>
 </div>
