@@ -23,6 +23,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { ProdottiComponent } from './lista-nozze/prodotti/prodotti.component';
 import { ViaggioComponent } from './lista-nozze/viaggio/viaggio.component';
+import { PartecipantiComponent } from './partecipanti/partecipanti.component';
+import { PartecipantiContComponent } from './partecipanti/partecipanti-cont/partecipanti-cont.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ViaggioComponent } from './lista-nozze/viaggio/viaggio.component';
     ListaNozzeComponent,
     GrazieComponent,
     ProdottiComponent,
-    ViaggioComponent
+    ViaggioComponent,
+    PartecipantiComponent,
+    PartecipantiContComponent
   ],
   imports: [
     BrowserModule,

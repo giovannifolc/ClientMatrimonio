@@ -13,7 +13,7 @@ export class CommunicationService {
 
   }
   httpOptions = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
-  private API_PATH = 'http://localhost:4200/api';
+  private API_PATH = 'http://3.128.247.10:8081/api';
 
   sendRSVP(data: RSVP) {
     let p;
@@ -22,5 +22,12 @@ export class CommunicationService {
         console.error(err);
         return throwError(err);
       })).subscribe(x => p=x);
+  }
+
+  getPartecipants(){
+    return this.http.get<RSVP[]>(`${this.API_PATH}/RSVP/partecipants`, this.httpOptions).pipe(catchError(err => {
+      console.error(err);
+      return throwError(err);
+    }))
   }
 }

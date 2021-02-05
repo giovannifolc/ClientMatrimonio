@@ -6,6 +6,7 @@ import {ListaNozzeComponent} from './lista-nozze/lista-nozze.component';
 import {GrazieComponent} from './grazie/grazie.component';
 import {ProdottiComponent} from './lista-nozze/prodotti/prodotti.component';
 import {ViaggioComponent} from './lista-nozze/viaggio/viaggio.component';
+import {PartecipantiContComponent} from './partecipanti/partecipanti-cont/partecipanti-cont.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,9 @@ const routes: Routes = [
   },
   {
     path: 'info', component: InfoComponent
+  },
+  {
+    path: 'partecipanti', component: PartecipantiContComponent
   },
   {
     path: 'listanozze',
