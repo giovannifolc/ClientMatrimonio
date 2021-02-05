@@ -8,7 +8,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class ResponsiveToolbarComponent implements OnInit {
 
-  menuItems: string[] = ['Home', 'RSVP & Info', 'Lista nozze', 'Un grande grazie'];
+  menuItems: string[] = ['Home', 'RSVP & Info', 'Lista nozze', 'Grazie'];
   navLinks = [
     {path: '/', label: 'Home'},
     {path: '/info', label: 'RSVP & Info'},

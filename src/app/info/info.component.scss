@@ -156,6 +156,10 @@
     flex-direction: column;
     padding: 20px;
     overflow: hidden;
+
+  }
+  .first{
+    padding-top: 70px;
   }
   .right {
     width: 50%;
@@ -188,7 +192,18 @@
     font-size: 18px;
     line-height: 150%;
     &.bold {
+      font-family: avenir-bold;;
+    }
+  }
+
+  .titoletto {
+    font-family: avenir-regular;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    &.bold {
       font-family: avenir-bold;
+      font-size: 30px;
     }
   }
 }
