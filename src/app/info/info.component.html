@@ -1,32 +1,32 @@
 <app-responsive-toolbar></app-responsive-toolbar>
 <div class="titolo">
-  <div class="separatore green2">
+  <div class="separatore green2" fxHide.xs>
     <span class="dot"></span>
     <span class="dot"></span>
     <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
   </div>
   <span class="text">Per la chiesa</span>
-  <div class="separatore green2">
+  <div class="separatore green2" fxHide.xs>
     <span class="dot"></span>
     <span class="dot"></span>
     <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
   </div>
 </div>
 
 <div class="containerRSVP">
   <div class="left sb first">
-    <div>
-      <span class="titoletto bold ">
+    <div class="titolettoCont">
+      <span class="titoletto bold">
         Parrocchia di Santa Maria Goretti
       </span>
     </div>
@@ -50,26 +50,26 @@
 
 
 <div class="titolo">
-  <div class="separatore green2">
+  <div class="separatore green2" fxHide.xs>
     <span class="dot"></span>
     <span class="dot"></span>
     <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
   </div>
   <span class="text">Festeggiamo!</span>
-  <div class="separatore green2">
+  <div class="separatore green2" fxHide.xs>
     <span class="dot"></span>
     <span class="dot"></span>
     <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
   </div>
 </div>
 
@@ -105,33 +105,33 @@
 </div> -->
 
 
-<div class="titolo green" id="rsvp" >
-  <div class="separatore white">
+<div class="titolo green" id="rsvp">
+  <div class="separatore white" fxHide.xs>
     <span class="dot"></span>
     <span class="dot"></span>
     <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
   </div>
   <span class="text">RSVP</span>
-  <div class="separatore white">
+  <div class="separatore white" fxHide.xs>
     <span class="dot"></span>
     <span class="dot"></span>
     <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
+    <span class="dot" fxHide.sm></span>
   </div>
 </div>
 <div class="flex green1">
   <div class="formRSVP">
     <form [formGroup]="rsvpForm">
-      <div class="control" >
+      <div class="control">
         <mat-form-field style="width: 100%;">
           <label class="inputLabel">Nome*</label>
           <input matInput formControlName="nome" placeholder="" class="inputStyle">
@@ -181,8 +181,8 @@
       <label>*campo obbligatorio</label>
     </form>
 
-    <button mat-raised-button disabled
-      (click)="submitRSVP()" type="submit">Impossibile confermare al momento</button> <!--[disabled]="rsvpForm.controls.nome.value === '' || rsvpForm.controls.cognome.value === '' ||
+    <button mat-raised-button disabled (click)="submitRSVP()" type="submit">Impossibile confermare al momento</button>
+    <!--[disabled]="rsvpForm.controls.nome.value === '' || rsvpForm.controls.cognome.value === '' ||
           rsvpForm.controls.email.hasError('required') ||  rsvpForm.controls.adulti.hasError('min')
           || rsvpForm.controls.adulti.hasError('required') || rsvpForm.controls.bambini.hasError('min')" -->
 
