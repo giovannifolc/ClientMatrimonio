@@ -24,6 +24,8 @@
 
   .cardWrapper {
     display: inline-flex;
+    min-width: 33%;
+    justify-content: center;
   }
   .card {
     display: flex;
@@ -101,7 +103,7 @@
   width: 100%;
   background-color: white;
   display: flex;
-
+  overflow-x: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -139,14 +141,18 @@
 }
 
 .timer {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 500px;
+  overflow: hidden;
   width: 100%;
   background-color: $green1;
   font-family: avenir-bold;
+
+  .titleBox {
+    margin-top: 40px;
+  }
 
   .title {
     text-align: center;
@@ -168,16 +174,21 @@
 
   .countdown {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
-    padding: 0 180px;
     margin: 50px 0;
+
+    .countBlockWrapper {
+      display: inline-flex;
+      min-width: 15%;
+    }
 
     .countBlock {
       display: block;
       width: 180px;
       height: auto;
-      margin: 0 5px;
+      margin: 20px 5px;
       .number {
         display: block;
         width: 100%;

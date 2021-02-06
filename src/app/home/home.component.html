@@ -105,7 +105,7 @@
 
 <!--COUNTDOWN-->
 <div class="timer">
-  <div>
+  <div class="titleBox">
     <p class="title">
       <span>
         SAVE THE DATE
@@ -123,60 +123,72 @@
     <!--TODO: mostrare messaggio se data passata-->
     <ng-container *ngIf="!timerExpired">
       <!--GIORNI-->
-      <div class="countBlock">
-        <div class="number">
-          <span>
-            {{days}}
-          </span>
-        </div>
-        <div class="label">
-          <span>
-            GIORNI
-          </span>
+      <div class="countBlockWrapper">
+        <div class="countBlock">
+          <div class="number">
+            <span>
+              {{days}}
+            </span>
+          </div>
+          <div class="label">
+            <span>
+              GIORNI
+            </span>
+          </div>
         </div>
       </div>
+
 
       <!--ORE-->
-      <div class="countBlock">
-        <div class="number">
-          <span>
-            {{hours}}
-          </span>
-        </div>
-        <div class="label">
-          <span>
-            ORE
-          </span>
+      <div class="countBlockWrapper">
+        <div class="countBlock">
+          <div class="number">
+            <span>
+              {{hours}}
+            </span>
+          </div>
+          <div class="label">
+            <span>
+              ORE
+            </span>
+          </div>
         </div>
       </div>
+
 
       <!--MINUTI-->
-      <div class="countBlock">
-        <div class="number">
-          <span>
-            {{minutes}}
-          </span>
-        </div>
-        <div class="label">
-          <span>
-            MINUTI
-          </span>
+      <div class="countBlockWrapper">
+        <div class="countBlock">
+          <div class="number">
+            <span>
+              {{minutes}}
+            </span>
+          </div>
+          <div class="label">
+            <span>
+              MINUTI
+            </span>
+          </div>
         </div>
       </div>
 
+
       <!--SECONDI-->
-      <div class="countBlock">
-        <div class="number">
-          <span>
-            {{seconds}}
-          </span>
-        </div>
-        <div class="label">
-          <span>
-            SECONDI
-          </span>
+      <div class="countBlockWrapper">
+        <div class="countBlock">
+          <div class="number">
+            <span>
+              {{seconds}}
+            </span>
+          </div>
+          <div class="label">
+            <span>
+              SECONDI
+            </span>
+          </div>
         </div>
       </div>
+
     </ng-container>
 
   </div>
