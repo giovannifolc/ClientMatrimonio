@@ -24,7 +24,8 @@
       <img src="assets/images/double-quote.svg" class="quote2">
       <p class="text fs30">
         L'inizio di ogni nostra mossa non è un'analisi di ciò che gli occhi
-        vedono, ma un abbraccio di ciò che il cuore attende.<br>Luigi Giussani
+        vedono, ma un abbraccio di ciò che il cuore attende.<br><br><br>
+        <span class="aDestra">- Luigi Giussani</span>
       </p>
     </div>
   </div>
@@ -119,11 +120,10 @@
   </div>
 
   <div class="countdown">
-    <!-- <span>{{ timer }}</span> -->
-    <!--TODO: mostrare messaggio se data passata-->
+
     <ng-container *ngIf="!timerExpired">
-      <!--GIORNI-->
       <div class="countBlockWrapper">
+        <!--GIORNI-->
         <div class="countBlock">
           <div class="number">
             <span>
@@ -136,11 +136,8 @@
             </span>
           </div>
         </div>
-      </div>
 
-
-      <!--ORE-->
-      <div class="countBlockWrapper">
+        <!--ORE-->
         <div class="countBlock">
           <div class="number">
             <span>
@@ -155,9 +152,8 @@
         </div>
       </div>
 
-
-      <!--MINUTI-->
       <div class="countBlockWrapper">
+        <!--MINUTI-->
         <div class="countBlock">
           <div class="number">
             <span>
@@ -170,11 +166,8 @@
             </span>
           </div>
         </div>
-      </div>
 
-
-      <!--SECONDI-->
-      <div class="countBlockWrapper">
+        <!--SECONDI-->
         <div class="countBlock">
           <div class="number">
             <span>
@@ -191,6 +184,68 @@
 
     </ng-container>
 
+    <!--MESSAGGIO MOSTRATO QUANDO SCADE TIMER-->
+    <ng-container *ngIf="timerExpired">
+      <div class="countBlockWrapper">
+        <!--GIORNI-->
+        <div class="countBlock">
+          <div class="number">
+            <span>
+              00
+            </span>
+          </div>
+          <div class="label">
+            <span>
+              GIORNI
+            </span>
+          </div>
+        </div>
+
+        <!--ORE-->
+        <div class="countBlock">
+          <div class="number">
+            <span>
+              00
+            </span>
+          </div>
+          <div class="label">
+            <span>
+              ORE
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="countBlockWrapper">
+        <!--MINUTI-->
+        <div class="countBlock">
+          <div class="number">
+            <span>
+              00
+            </span>
+          </div>
+          <div class="label">
+            <span>
+              MINUTI
+            </span>
+          </div>
+        </div>
+
+        <!--SECONDI-->
+        <div class="countBlock">
+          <div class="number">
+            <span>
+              00
+            </span>
+          </div>
+          <div class="label">
+            <span>
+              SECONDI
+            </span>
+          </div>
+        </div>
+      </div>
+    </ng-container>
   </div>
 
 </div>

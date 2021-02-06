@@ -43,6 +43,7 @@ html,
 body {
   height: 100%;
   font-family: avenir-regular;
+  min-width: 320px;
 }
 
 body {
@@ -70,9 +71,9 @@ body {
   line-height: 60px;
 }
 
-.right{
+.right {
   text-align: right;
-  padding-right:40px;
+  padding-right: 40px;
 }
 .green {
   color: #367e3d;
@@ -100,7 +101,7 @@ body {
 
   &:hover {
     text-decoration: none;
-    background-color: $green3;//#989191;
+    background-color: $green3; //#989191;
     color: white;
   }
   &.disabled {

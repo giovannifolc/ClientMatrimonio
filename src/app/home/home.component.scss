@@ -71,6 +71,8 @@
     padding: 20px;
     background-color: #fff;
     width: 40%;
+    min-width: 300px;
+    max-width: 600px;
     height: 500px;
     position: relative;
     left: 50%;
@@ -78,6 +80,22 @@
     transform: translateX(-50%);
     text-align: center;
     overflow: hidden;
+
+    @media only screen and (min-device-width: 640px) {
+      width: 60%;
+    }
+    @media only screen and (min-device-width: 640px) and (max-device-width: 850px) {
+      .fs30 {
+        font-size: 25px;
+        line-height: 150% !important;
+      }
+    }
+    @media only screen and (max-device-width: 640px) {
+      .fs30 {
+        font-size: 20px;
+        line-height: 150% !important;
+      }
+    }
   }
 }
 
@@ -101,6 +119,7 @@
 .container4Home {
   height: 500px;
   max-height: 500px;
+  object-fit: fill;
   width: 100%;
   background-color: white;
   display: flex;
@@ -115,8 +134,9 @@
     .center {
       margin: 20px;
       text-align: center;
-      width: 500px;
+      max-width: 500px;
       font-size: 20px;
+      font-weight: 600;
     }
   }
 
@@ -124,9 +144,19 @@
     width: 570px;
     height: 86%;
     background-color: $green1;
-    padding: 5px;
+    border: 5px solid $green1;
     overflow: hidden;
     opacity: 0.3;
+
+    @media only screen and (max-device-width: 640px) {
+      height: 100%;
+      border: none;
+
+      .myImg {
+        height: 100%;
+        width: auto;
+      }
+    }
   }
 }
 
@@ -182,7 +212,8 @@
 
     .countBlockWrapper {
       display: inline-flex;
-      min-width: 15%;
+      justify-content: center;
+      align-items: center;
     }
 
     .countBlock {
@@ -234,18 +265,23 @@
 
   .quote2 {
     position: absolute;
-    right: 100px;
-    bottom: 10px;
+    right: 30px;
+    bottom: 0px;
     height: 70px;
     width: 70px;
     transform: rotate(180deg);
-    z-index: 1;
   }
 
   .text {
     padding: 30px;
     position: relative;
     text-align: center;
+
+    .aDestra {
+      position: absolute;
+      right: 70px;
+      bottom: 20px;
+    }
   }
 }
 
@@ -281,6 +317,37 @@
     }
     .subTitle {
       color: white;
+    }
+  }
+}
+
+::ng-deep {
+  .carousel-item {
+    /* Force to always be block */
+    display: block !important;
+    z-index: 1;
+    position: absolute;
+    transform: translateX(0);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, visibility 1s;
+    visibility: hidden;
+  }
+
+  .carousel-item.active {
+    position: relative;
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, visibility 1s;
+  }
+
+  @media only screen and (max-device-width: 640px) {
+    .carousel,
+    .carousel-inner,
+    .carousel-item,
+    .picsum-img-wrapper {
+      width: unset;
+      height: 100%;
     }
   }
 }
