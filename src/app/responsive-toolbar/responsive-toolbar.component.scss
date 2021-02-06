@@ -1,16 +1,101 @@
 @import "src/assets/styles/colors.scss";
 
-.toolbar{
+.toolbar {
   background-color: $greenbar;
 }
 
-.toolbarButtons{
+.toolbarButtons {
   margin: auto;
-  background-color:transparent;
+  background-color: transparent;
 }
 
 button {
   font-family: honey;
   font-size: 30px;
   color: white;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: $greenbar;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  top: 25%;
+  width: 100%;
+  height: 40%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: white;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+body {
+  background-color: #ff6f61;
+}
+
+main {
+  height: 100vh;
+}
+
+.turquoise {
+  background-color: white;
+}
+
+.mobileBar {
+  a {
+    display: flex;
+  }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .padded {
+    padding: 0 20px;
+  }
 }

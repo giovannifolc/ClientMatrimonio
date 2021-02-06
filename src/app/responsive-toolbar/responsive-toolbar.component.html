@@ -1,28 +1,64 @@
 <mat-toolbar fxLayout="row" class="toolbar">
   <mat-toolbar-row fxHide.xs>
-    <p class="fs25 text-white mb10" style="margin: auto; margin-left: 200px;">Simo e Leti</p>
+
+    <p class="fs25 text-white mb10" style="margin: auto; cursor: pointer" [routerLink]="'/'">Simo e Leti</p>
     <div class="toolbarButtons">
-      <button mat-button [routerLink]="'/'" >Home</button>
+      <button mat-button [routerLink]="'/'">Home</button>
       <button mat-button [routerLink]="'/info'">Info & RSVP</button>
       <button mat-button [routerLink]="'/listanozze'">Lista Nozze </button>
       <button mat-button [routerLink]="'/grazie'">Grazie</button>
     </div>
 
   </mat-toolbar-row>
-  <button mat-icon-button (click)="side.toggle()" fxHide fxShow.xs >
-    <mat-icon>menu</mat-icon>
-  </button>
-  <mat-drawer-container autosize fxHide fxShow.xs>
-    <mat-drawer mode="side" opened position="start" #side>
-      <div>
-        <button mat-button [routerLink]="'/'">Home</button>
-        <mat-divider></mat-divider>
-        <button mat-button [routerLink]="'/info'">Info & RSVP</button>
-        <mat-divider></mat-divider>
-        <button mat-button [routerLink]="'/listanozze'">Lista nozze </button>
-        <mat-divider></mat-divider>
-        <button mat-button [routerLink]="'/grazie'">Un grande grazie</button>
-      </div>
+
+  <!-- <mat-drawer-container autosize fxHide fxShow.xs>
+
+    <button mat-icon-button (click)="side.toggle()" fxHide fxShow.xs>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-drawer mode="side" position="start" #side>
+      <button mat-button [routerLink]="'/'">Home</button>
+      <mat-divider></mat-divider>
+      <button mat-button [routerLink]="'/info'">Info & RSVP</button>
+      <mat-divider></mat-divider>
+      <button mat-button [routerLink]="'/listanozze'">Lista Nozze</button>
+      <mat-divider></mat-divider>
+      <button mat-button [routerLink]="'/grazie'">Grazie</button>
     </mat-drawer>
-  </mat-drawer-container>
+  </mat-drawer-container> -->
+  <!-- <p class="fs25 text-white mb10" fxHide fxShow.xs style="margin: auto; margin-right: 20px; cursor: pointer"
+    [routerLink]="'/'">Simo e Leti</p> -->
+
+  <div class="mobileBar" fxHide fxShow.xs>
+    <div class="padded">
+      <a id="openNav">
+        <!-- <i class="fas fa-bars"></i> -->
+        <mat-icon style="color: white">menu</mat-icon>
+      </a>
+    </div>
+
+    <div class="padded">
+      <span class="fs25 text-white mb10" style="cursor: pointer" [routerLink]="'/'">Simo e Leti</span>
+    </div>
+  </div>
+
 </mat-toolbar>
+
+<div id="myNav" class="overlay" fxHide fxShow.xs>
+  <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
+  <div class="overlay-content">
+    <button mat-button [routerLink]="'/'">Home</button>
+    <button mat-button [routerLink]="'/info'">Info & RSVP</button>
+    <button mat-button [routerLink]="'/listanozze'">Lista Nozze </button>
+    <button mat-button [routerLink]="'/grazie'">Grazie</button>
+  </div>
+</div>
+
+<!-- <div class="fixed-action-btn" style="bottom: 25px; right: 25px;">
+  <a class="btn-floating btn-lg turquoise" id="openNav">
+    <i class="fas fa-bars"></i>
+  </a>
+</div>
+<header fxHide fxShow.xs>
+
+</header> -->
