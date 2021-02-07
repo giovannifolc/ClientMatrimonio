@@ -40,6 +40,10 @@
     font-size: 80px; /*40px*/
     line-height: 150%;
     margin: 0 30px;
+    @media only screen and (max-device-width: 640px){
+      font-size: 60px;
+    }
+
   }
   .separatore {
     display: flex;
