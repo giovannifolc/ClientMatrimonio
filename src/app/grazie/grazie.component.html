@@ -1,5 +1,5 @@
 <app-responsive-toolbar id="top"></app-responsive-toolbar>
-<div class="page">
+<div class="page" fxHide.lt-sm>
   <div class="left">
     <div class="photoContainer">
       <ngb-carousel #carouselTL *ngIf="ImageData4" [showNavigationArrows]="showNavigationArrows"
@@ -70,4 +70,66 @@
     <p class="fs70 green1 mb10">Simo e Leti</p>
   </div>
 
+</div>
+
+<div fxHide fxShow.lt-sm class="page-mobile">
+  <div class="boxTesto">
+    <div class="separatore green1">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div><br>
+    <span>
+      «Occorre solo che abbiamo a camminare
+      insieme, seguendo il Mistero che fa tutto»</span><br>
+    <span class="aDestra">
+      - Luigi Giussani</span><br><br>
+    <span style="font-size: 26px;">
+      Siamo grati del volto amico di ciascuno di voi.<br>
+      Ci auguriamo di vedervi tutti per festeggiare insieme!</span><br>
+    <p class="fs70 green1 mb10">Simo e Leti</p>
+  </div>
+  <div>
+    <div class="side">
+      <div class="photoContainer">
+        <ngb-carousel #carousel1 *ngIf="ImageData4" [showNavigationArrows]="showNavigationArrows"
+                      [showNavigationIndicators]="showNavigationIndicators">
+          <ng-template ngbSlide *ngFor="let image of ImageData4">
+            <div class="picsum-img-wrapper">
+              <img [src]="image" alt="Random slide" class="myImg">
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+    <div class="side">
+      <div class="photoContainer">
+        <ngb-carousel #carousel2 *ngIf="ImageData3" [showNavigationArrows]="showNavigationArrows"
+                      [showNavigationIndicators]="showNavigationIndicators">
+          <ng-template ngbSlide *ngFor="let image of ImageData3">
+            <div class="picsum-img-wrapper">
+              <img [src]="image" alt="Random slide" class="myImg">
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+  </div>
+  <div class="center">
+    <div class="photoContainer">
+      <ngb-carousel #carousel3 *ngIf="ImageData5" [showNavigationArrows]="showNavigationArrows"
+                    [showNavigationIndicators]="showNavigationIndicators">
+        <ng-template ngbSlide *ngFor="let image of ImageData5">
+          <div class="picsum-img-wrapper">
+            <img [src]="image" alt="Random slide" class="myImg">
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+  </div>
 </div>

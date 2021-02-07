@@ -38,10 +38,26 @@ export class GrazieComponent implements OnInit, AfterViewInit {
     "assets/images/grazie/vs_simo_michi.jpg",
     "assets/images/grazie/vs_sursum.jpg"
   ]
+
+  public ImageData5 = [
+    "assets/images/grazie/od_laurea_j.jpg",
+    "assets/images/grazie/od_leti_e_compagni_liceo.jpg",
+    "assets/images/grazie/od_leti_e_mitica_segre.jpg",
+    "assets/images/grazie/od_leti_e_svizzere.jpg",
+    "assets/images/grazie/od_leti_simo_e_franco.jpg",
+    "assets/images/grazie/os_poli.jpg",
+    "assets/images/grazie/os_simo_and_co_a_serre.jpg",
+    "assets/images/grazie/os_simo_and_co_al_lago.jpg",
+    "assets/images/grazie/os_simo_e_famiglia.jpg",
+    "assets/images/grazie/os_simo_leti_e_j.jpg"
+  ]
   @ViewChild('carouselBL') public carouselBL: NgbCarousel;
   @ViewChild('carouselBR') public carouselBR: NgbCarousel;
   @ViewChild('carouselTL') public carouselTL: NgbCarousel;
   @ViewChild('carouselTR') public carouselTR: NgbCarousel;
+  @ViewChild('carousel1') public carousel1: NgbCarousel;
+  @ViewChild('carousel2') public carousel2: NgbCarousel;
+  @ViewChild('carousel3') public carousel3: NgbCarousel;
   public pauseOnFocus = false;
   public pauseOnHover = false;
   public pauseOnIndicator = false;
@@ -74,6 +90,9 @@ export class GrazieComponent implements OnInit, AfterViewInit {
     this.carouselTL.pause();
     this.carouselBR.pause();
     this.carouselBL.pause();
+    this.carousel1.pause();
+    this.carousel2.pause();
+    this.carousel3.pause();
 
     setTimeout(() => {
       this.carouselTR.cycle();
@@ -91,6 +110,19 @@ export class GrazieComponent implements OnInit, AfterViewInit {
       this.carouselTL.cycle();
       console.log('TL reactivated');
     }, 6000);
+    setTimeout(() => {
+      this.carousel1.cycle();
+      console.log('1 reactivated');
+    }, 1000);
+    setTimeout(() => {
+      this.carousel2.cycle();
+      console.log('2 reactivated');
+    }, 3000);
+    setTimeout(() => {
+      this.carousel3.cycle();
+      console.log('3 reactivated');
+    }, 5000);
+
   }
 
   public ngOnInit(): void {
