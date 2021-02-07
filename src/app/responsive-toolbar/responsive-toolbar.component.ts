@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import * as $ from "jquery";
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-responsive-toolbar',
@@ -31,11 +31,15 @@ export class ResponsiveToolbarComponent implements OnInit, AfterViewInit {
   // #region Public Methods (2)
 
   public ngAfterViewInit() {
-    $('#openNav').on('click', function () {
+    $('#openNav').on('click', () => {
       $('#myNav').css("width", "100vw");
     });
 
-    $('#closeNav').on('click', function () {
+    $('#closeNav').on('click', () => {
+      $('#myNav').css("width", "0%");
+    });
+
+    $('#myNav > .overlay-content > button').on('click', () => {
       $('#myNav').css("width", "0%");
     });
   }

@@ -1,4 +1,3 @@
-<app-responsive-toolbar id="top"></app-responsive-toolbar>
 <div class="page" fxHide.lt-sm>
   <div class="left">
     <div class="photoContainer">
@@ -98,7 +97,7 @@
     <div class="side">
       <div class="photoContainer">
         <ngb-carousel #carousel1 *ngIf="ImageData4" [showNavigationArrows]="showNavigationArrows"
-                      [showNavigationIndicators]="showNavigationIndicators">
+          [showNavigationIndicators]="showNavigationIndicators">
           <ng-template ngbSlide *ngFor="let image of ImageData4">
             <div class="picsum-img-wrapper">
               <img [src]="image" alt="Random slide" class="myImg">
@@ -110,7 +109,7 @@
     <div class="side">
       <div class="photoContainer">
         <ngb-carousel #carousel2 *ngIf="ImageData3" [showNavigationArrows]="showNavigationArrows"
-                      [showNavigationIndicators]="showNavigationIndicators">
+          [showNavigationIndicators]="showNavigationIndicators">
           <ng-template ngbSlide *ngFor="let image of ImageData3">
             <div class="picsum-img-wrapper">
               <img [src]="image" alt="Random slide" class="myImg">
@@ -123,7 +122,7 @@
   <div class="center">
     <div class="photoContainer">
       <ngb-carousel #carousel3 *ngIf="ImageData5" [showNavigationArrows]="showNavigationArrows"
-                    [showNavigationIndicators]="showNavigationIndicators">
+        [showNavigationIndicators]="showNavigationIndicators">
         <ng-template ngbSlide *ngFor="let image of ImageData5">
           <div class="picsum-img-wrapper">
             <img [src]="image" alt="Random slide" class="myImg">
