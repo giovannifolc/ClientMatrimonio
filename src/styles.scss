@@ -187,3 +187,15 @@ body {
   visibility: visible;
   opacity: 1;
 }
+
+.photoContainerHome {
+  @media only screen and (max-device-width: 640px) {
+    .carousel,
+    .carousel-inner,
+    .carousel-item,
+    .picsum-img-wrapper {
+      width: unset;
+      height: 100%;
+    }
+  }
+}

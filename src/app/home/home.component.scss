@@ -117,7 +117,6 @@
   @media only screen and (max-device-width: 640px) {
     padding-top: 0px;
   }
-
 }
 
 .container4Home {
@@ -343,15 +342,5 @@
     visibility: visible;
     opacity: 1;
     transition: opacity 0.5s ease-in-out, visibility 1s;
-  }
-
-  @media only screen and (max-device-width: 640px) {
-    .carousel,
-    .carousel-inner,
-    .carousel-item,
-    .picsum-img-wrapper {
-      width: unset;
-      height: 100%;
-    }
   }
 }
