@@ -7,7 +7,7 @@
     "all": "npm i; npm audit --force; npm run hmr",
     "hmr": "ng serve --hmr",
     "host": "ng serve --host 0.0.0.0",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
