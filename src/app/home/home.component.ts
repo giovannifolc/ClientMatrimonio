@@ -3,6 +3,8 @@ import { timer } from 'rxjs';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import {CommonModule} from '@angular/common';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -20,7 +22,22 @@ export class HomeComponent {
     "assets/images/grazie/od_leti_e_svizzere.jpg",
     "assets/images/grazie/os_simo_and_co_al_lago.jpg",
     "assets/images/grazie/od_leti_simo_e_franco.jpg",
-    "assets/images/grazie/os_simo_leti_e_j.jpg"
+    "assets/images/grazie/os_simo_leti_e_j.jpg",
+    "assets/images/grazie/os_poli3.jpg",
+    "assets/images/grazie/od_compa.jpg",
+    "assets/images/grazie/od_compagni.jpg",
+    "assets/images/grazie/od_compagni leti.jpg",
+    "assets/images/grazie/od_ctestokova.jpg",
+    "assets/images/grazie/od_compagni.jpg",
+    "assets/images/grazie/od_Edo e simo.jpg",
+    "assets/images/grazie/od_losanna.jpg",
+    "assets/images/grazie/od_poli2.jpg",
+    "assets/images/grazie/os_donne poli.jpg",
+    "assets/images/grazie/os_famiglia.jpg",
+    "assets/images/grazie/os_giubo e co.jpg",
+    "assets/images/grazie/os_leti varo.jpg",
+    "assets/images/grazie/os_montagna_gio.jpg",
+    "assets/images/grazie/os_vasto.jpg"
   ]
   public clock = timer(0, 1000);
   public days = 0;

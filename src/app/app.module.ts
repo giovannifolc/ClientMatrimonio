@@ -25,6 +25,7 @@ import { ProdottiComponent } from './lista-nozze/prodotti/prodotti.component';
 import { ViaggioComponent } from './lista-nozze/viaggio/viaggio.component';
 import { PartecipantiComponent } from './partecipanti/partecipanti.component';
 import { PartecipantiContComponent } from './partecipanti/partecipanti-cont/partecipanti-cont.component';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { PartecipantiContComponent } from './partecipanti/partecipanti-cont/part
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     FlexLayoutModule,

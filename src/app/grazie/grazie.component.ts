@@ -15,41 +15,77 @@ export class GrazieComponent implements OnInit, AfterViewInit {
     "assets/images/grazie/od_leti_e_compagni_liceo.jpg",
     "assets/images/grazie/od_leti_e_mitica_segre.jpg",
     "assets/images/grazie/od_leti_e_svizzere.jpg",
-    "assets/images/grazie/od_leti_simo_e_franco.jpg"
+    "assets/images/grazie/od_leti_simo_e_franco.jpg",
+    "assets/images/grazie/od_compa.jpg",
+    "assets/images/grazie/od_compagni.jpg",
+    "assets/images/grazie/od_compagni leti.jpg",
+    "assets/images/grazie/od_ctestokova.jpg",
+    "assets/images/grazie/od_compagni.jpg",
+    "assets/images/grazie/od_Edo e simo.jpg",
+    "assets/images/grazie/od_losanna.jpg",
+    "assets/images/grazie/od_poli2.jpg"
   ]
   public ImageData2 = [
     "assets/images/grazie/os_poli.jpg",
     "assets/images/grazie/os_simo_and_co_a_serre.jpg",
     "assets/images/grazie/os_simo_and_co_al_lago.jpg",
     "assets/images/grazie/os_simo_e_famiglia.jpg",
-    "assets/images/grazie/os_simo_leti_e_j.jpg"
+    "assets/images/grazie/os_simo_leti_e_j.jpg",
+    "assets/images/grazie/os_donne poli.jpg",
+    "assets/images/grazie/os_famiglia.jpg",
+    "assets/images/grazie/os_giubo e co.jpg",
+    "assets/images/grazie/os_leti varo.jpg",
+    "assets/images/grazie/os_montagna_gio.jpg",
+    "assets/images/grazie/os_vasto.jpg",
+    "assets/images/grazie/os_poli3.jpg",
+    "assets/images/grazie/os_vasto.jpg"
   ]
   public ImageData3 = [
     "assets/images/grazie/vd_leti_cossu_e_ele.jpg",
     "assets/images/grazie/vd_leti_e_compa_uni.jpg",
     "assets/images/grazie/vd_leti_e_famiglia.jpg",
     "assets/images/grazie/vd_leti_ele_rovers.jpg",
-    "assets/images/grazie/vd_leti_giuli.jpg"
+    "assets/images/grazie/vd_leti_giuli.jpg",
+    "assets/images/grazie/vd_simo nonna.jpg",
+    "assets/images/grazie/vd_simo anto.jpg"
+
   ]
   public ImageData4 = [
     "assets/images/grazie/vs_simo_edo.jpg",
     "assets/images/grazie/vs_simo_j_varo.jpg",
     "assets/images/grazie/vs_simo_maio_nicas.jpg",
     "assets/images/grazie/vs_simo_michi.jpg",
-    "assets/images/grazie/vs_sursum.jpg"
+    "assets/images/grazie/vs_sursum.jpg",
+    "assets/images/grazie/vs_fra simo.jpg",
+    "assets/images/grazie/vs_laurea.jpg"
   ]
 
   public ImageData5 = [
     "assets/images/grazie/od_laurea_j.jpg",
-    "assets/images/grazie/od_leti_e_compagni_liceo.jpg",
-    "assets/images/grazie/od_leti_e_mitica_segre.jpg",
-    "assets/images/grazie/od_leti_e_svizzere.jpg",
-    "assets/images/grazie/od_leti_simo_e_franco.jpg",
-    "assets/images/grazie/os_poli.jpg",
     "assets/images/grazie/os_simo_and_co_a_serre.jpg",
-    "assets/images/grazie/os_simo_and_co_al_lago.jpg",
+    "assets/images/grazie/od_leti_e_compagni_liceo.jpg",
     "assets/images/grazie/os_simo_e_famiglia.jpg",
-    "assets/images/grazie/os_simo_leti_e_j.jpg"
+    "assets/images/grazie/od_leti_e_mitica_segre.jpg",
+    "assets/images/grazie/os_poli.jpg",
+    "assets/images/grazie/od_leti_e_svizzere.jpg",
+    "assets/images/grazie/os_simo_and_co_al_lago.jpg",
+    "assets/images/grazie/od_leti_simo_e_franco.jpg",
+    "assets/images/grazie/os_simo_leti_e_j.jpg",
+    "assets/images/grazie/os_poli3.jpg",
+    "assets/images/grazie/od_compa.jpg",
+    "assets/images/grazie/od_compagni.jpg",
+    "assets/images/grazie/od_compagni leti.jpg",
+    "assets/images/grazie/od_ctestokova.jpg",
+    "assets/images/grazie/od_compagni.jpg",
+    "assets/images/grazie/od_Edo e simo.jpg",
+    "assets/images/grazie/od_losanna.jpg",
+    "assets/images/grazie/od_poli2.jpg",
+    "assets/images/grazie/os_donne poli.jpg",
+    "assets/images/grazie/os_famiglia.jpg",
+    "assets/images/grazie/os_giubo e co.jpg",
+    "assets/images/grazie/os_leti varo.jpg",
+    "assets/images/grazie/os_montagna_gio.jpg",
+    "assets/images/grazie/os_vasto.jpg"
   ]
   @ViewChild('carouselBL') public carouselBL: NgbCarousel;
   @ViewChild('carouselBR') public carouselBR: NgbCarousel;
