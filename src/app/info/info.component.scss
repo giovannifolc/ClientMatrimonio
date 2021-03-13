@@ -171,6 +171,9 @@
   }
   .first {
     padding-top: 70px;
+    @media only screen and (max-device-width: 670px) {
+      padding-top: 20px;
+    }
   }
   .right {
     width: 600px;
@@ -202,6 +205,7 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 150%;
+    text-align: center;
     &.bold {
       font-family: avenir-bold;
       margin-bottom: 20px;

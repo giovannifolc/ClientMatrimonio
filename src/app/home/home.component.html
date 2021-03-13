@@ -1,6 +1,5 @@
-<app-responsive-toolbar></app-responsive-toolbar>
 <div class="container1Home">
-  <img alt="immagine in montagna" src="../../assets/images/home.jpg" class="backgroundHome" />
+  <img alt="immagine in montagna" src="../../assets/images/home_prova.jpg" class="backgroundHome" />
 </div>
 <div class="rettVerde">
   <div class="contBianco">
@@ -75,7 +74,7 @@
 
 <div class="container4Home">
   <div class="photoContainerHome">
-    <ngb-carousel *ngIf="Images" [showNavigationArrows]="false" [showNavigationIndicators]="false">
+    <ngb-carousel *ngIf="Images.length != 0" [showNavigationArrows]="false" [showNavigationIndicators]="false">
       <ng-template ngbSlide *ngFor="let image of Images">
         <div class="picsum-img-wrapper">
           <img [src]="image" alt="Random slide" class="myImg">
@@ -85,7 +84,7 @@
   </div>
 
   <div class="boxScritta flex column">
-    <div class="separatore green2">
+    <!--<div class="separatore green2">
       <span class="dot"></span>
       <span class="dot"></span>
       <span class="dot"></span>
@@ -94,9 +93,9 @@
       <span class="dot"></span>
       <span class="dot"></span>
       <span class="dot"></span>
-    </div>
-    <span class="fs30 center">«Occorre solo che abbiamo a camminare insieme, seguendo il Mistero che fa tutto»</span>
-    <a [routerLink]="'/grazie'" fragment="top" class="button" style="font-size: 16px">Per ringraziarvi...</a>
+    </div>-->
+    <!--<span class="fs30 center">«Occorre solo che abbiamo a camminare insieme, seguendo il Mistero che fa tutto»</span>-->
+    <a [routerLink]="'/grazie'" fragment="top" class="button" style="font-size: 16px">Un grande grazie!</a>
   </div>
 </div>
 

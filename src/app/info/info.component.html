@@ -1,4 +1,3 @@
-<app-responsive-toolbar></app-responsive-toolbar>
 <div class="titolo">
   <div class="separatore green2" fxHide.xs>
     <span class="dot"></span>
@@ -74,7 +73,7 @@
 </div>
 
 <div class="containerRSVP">
-  <div class="left">
+  <div class="left" fxHide fxShow.gt-xs>
     <img src="../../assets/images/cascina_marietta.jpg" class="immagine" />
   </div>
   <div class="right sb">
@@ -84,6 +83,10 @@
       </span>
     </div>
 
+    <span class="descrizione" style="padding-top: 10px; padding-bottom: 10px;">
+      Non sappiamo ancora come e se potremo fare la festa.<br>Vi terremo aggiornati su eventuali sviluppi nelle prossime
+      settimane!
+    </span>
 
     <div class="mappa">
       <span class="descrizione bold">
@@ -96,7 +99,9 @@
       </div>
     </div>
 
-
+  </div>
+  <div class="left" fxHide fxShow.xs>
+    <img src="../../assets/images/cascina_marietta.jpg" class="immagine" />
   </div>
 </div>
 
