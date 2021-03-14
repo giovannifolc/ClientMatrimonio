@@ -2,8 +2,8 @@
 
 .container {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 23%;
   object-fit: cover;
 
 }
@@ -22,7 +22,7 @@ body {
   background: #f2f2f2;
 }
 img {
-  width: 100%;
+  width: auto;
   height: 400px;
   object-fit: cover;
 }
@@ -31,11 +31,11 @@ h2 {
 }
 .grid-container {
   display: grid;
-  grid-template-columns:repeat(3, minmax(400px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 3em;
   padding-left: 3rem;
   padding-right: 3rem;
-  padding-bottom: 3%;
+  padding-bottom: 7%;
 
 }
 
@@ -108,7 +108,7 @@ h2 {
 
 .containerOne {
   position: relative;
-  width: 100%;
+  width: auto;
   height: 200px;
   object-fit: cover;
   cursor: pointer;
@@ -162,7 +162,7 @@ h2 {
 }
 
 .titolo {
-  width: 100%;
+  width: auto;
   height: 100px;
   color: $green2;
   display: flex;
@@ -191,7 +191,7 @@ h2 {
   }
 }
 .titoloCon {
-  width: 100%;
+  width: auto;
   height: 100px;
   color: $green2;
   display: flex;
@@ -221,7 +221,7 @@ h2 {
 }
 .titoloBis {
   padding-top: 5rem;
-  width: 100%;
+  width: auto;
   height: 100px;
   color: #ffffff;
   display: flex;
@@ -258,6 +258,7 @@ h2 {
   top: 5rem;
   margin-left: 30%;
   margin-right: 30%;
+  margin-top: 12%;
   width: 40%;
   object-fit: contain;
 
@@ -321,7 +322,7 @@ h2 {
   }
   .t2 {
     width: 800px;
-    height: auto;
+    height: 400px;
     font-family: avenir-regular;
     font-size: 38px;
     line-height: 54px;
@@ -332,7 +333,7 @@ h2 {
 
   }
   .banca {
-    width: 800px;
+    width: auto;
     height: auto;
     font-family: avenir-regular;
     line-height: 35px;
@@ -349,38 +350,44 @@ h2 {
   }
 }
 
-
-@media only screen and (max-width: 1200px) {
-  .grid-container {
-
-    grid-template-columns:repeat(2, minmax(400px, 1fr));
-
+@media only screen and (max-width: 1600px) {
+  .location-image  .img{
+      width: 100%;
+    }
+  .cropped {
+    width: 100%;
+    height: 399px;
+    overflow: hidden;
 
   }
-  .t2 {
-    width: 755px;
-    height: 400px;
-    font-size: 24px;
-    line-height: 54px;
-    color: #ffffff;
-    padding-left: 3rem;
-    padding-top: 17rem;
+
+  .cropped img {
+    margin: -20px 0px 0px 39px;
   }
+
+
 }
-@media only screen and (max-width: 1024px) {
-  .titolo{
-    margin-left: 7%;
+
+
+@media only screen and (max-width: 1224px) {
+
+
+  .cropped img {
+    margin: -20px 0px 0px 19px;
   }
-  .grid-container {
-
-    grid-template-columns:repeat(2, minmax(400px, 1fr));
-    padding-left: 9rem;
-
-
+    .container{
+    padding-top: 10rem;
+    height: 14%;
+  }
+  .location-image{
+    width: 92%;
+  }
+  .location-title {
+    width:92%
   }
   .container2 {
     position: relative;
-    width: 1138px;
+    width: auto;
     height: 100%;
     object-fit: cover;
     cursor: pointer;
@@ -389,101 +396,165 @@ h2 {
   }
 
   .t2 {
-    width: 664px;
+    width: auto;
     height: 388px;
-    font-size: 27px;
+    font-size: 47px;
     line-height: 54px;
     color: #ffffff;
-    padding-left: 3rem;
-    padding-top: 17rem;
+    padding-left: 2rem;
+    padding-top: 5rem;
   }
-  .titoloCon{
-    margin:7%;
-  }
-  .image{
-    margin-left: 37%
 
-  }
   .text-block{
     margin-left:7%;
   }
-}
-@media only screen and (max-width: 800px) {
-  .titolo{
-      padding: 0% 0%;
-      margin-left: 20%;
-
-  }
-
-  .titoloCon .text {
-    font-family: honey;
-    font-size: 61px;
-    line-height: 150%;
-    margin: 0 30px;
-  }
-  .grid-container {
-
-    grid-template-columns:repeat(1, minmax(400px, 1fr));
-    padding-left: 18rem;
-    padding-right: 0rem;
-
-  }
-  .container2{
-    width: 1040px;
-  }
-  .container{
-    margin-left: 17%;
-  }
-  .image{
-    margin-left: 30%;
+  .imageBis{
+    margin-right: 22%;
+    width: 100%;
   }
   .button{
-    margin: 60px 286px;
+    margin: 60px 366px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .cropped {
+    width: 100%;
+    height: 399px;
+    overflow: hidden;
+
   }
 
+  .cropped img {
+    margin: -20px 0px 0px 20px;
+  }
 
-}
-@media only screen and (max-width: 380px) {
-  .titolo{
-    width: 233%;
-    padding: 24% 110%;
-    margin-left: 16%;
+  .grid-container{
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+  }
+  .container{
+    padding-top: 10rem;
+    height: 14%;
+  }
+  .image{
+    margin-left: 12%;
+    margin-top: 38%;
+    width: 70%;
+  }
+  .location-title {
+    width:92%
+  }
+  .container2 {
+
+    height: 105%;
+
+  }
+
+  .t2 {
+    padding-bottom: 28rem;
+  }
+
+  .text-block{
+    margin-left:7%;
+  }
+  .imageBis{
+    margin-right: 22%;
+    width: 100%;
+    height: 565px;
+  }
+  .button {
+    margin: 32px 127px;
+  }
+  .titoloCon{
+    height: 226px;
     .text{
-      font-size: 72px;
+      line-height: 80%;
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 500px) {
+
+  .location-image{
+
+    .imgageMob{
+      width: 300px;
+    }
+  }
+.descrizione{
+  font-size: 14px;
+  width: 88%;
+  .banca{
+    font-size: 14px;
+    margin-left: -20%;
+  }
+}
+  .titolo {
+    .text {
+
+      font-size: 53px;
       line-height: 87%;
       margin: 11px 53px;
     }
+  }
+
+  .grid-container {
+    grid-template-columns:repeat(auto-fit, minmax(355px, 1fr));
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
 
   .titoloCon {
     margin: 1%;
     margin-left: -6%;
-  }
-  .grid-container {
-
-    grid-template-columns:repeat(1, minmax(400px, 1fr));
-    padding-left: 18rem;
-    padding-right: 0rem;
+    .text{
+      font-size: 32px;
+    }
 
   }
-  .container2{
-    width: 1040px;
+
+  .imageBis {
+
+    height: 400px;
+
+  }
+
+  .image {
+    width: 82%;
+    margin-top:145%;
+    margin-left: -8%;
+  }
+  .button {
+    margin: 0px -34px;
+    font-size: 12px;
+  }
+  .t2{
+    font-size: 20px;
   }
   .container{
-    width: 258%;
+    width: 73%;
+  }
+  .container2{
+    padding-bottom: 58rem;
+  }
+  .cropped {
+    width: 330px;
+    height: 399px;
+    overflow: hidden;
 
   }
-  .image{
-    margin-left: 26%;
+
+  .cropped img {
+    margin: -20px 0px 0px -87px;
   }
-  .button{
-    margin: 60px 324px;
-  }
-
-
-
-
-
 }
+
+
+
+
+
+
+
 
